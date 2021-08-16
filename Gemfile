@@ -32,11 +32,6 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
-gem 'devise'
-gem 'devise-security'
-gem 'omniauth-facebook'
-gem 'omniauth-rails_csrf_protection'
-
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
