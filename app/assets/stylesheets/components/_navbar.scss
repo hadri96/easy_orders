@@ -1,12 +1,22 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  #nav-home {
+  background: #343a40;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 0 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  height: 51px;
+  padding: 18px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.fixed-top {
+  height: 38px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-toggler {
+  background-color: white;
+  height: 38px;
+  border-radius: 100%;
 }

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4 w-50 log-form">
+
+    <h1>Create a new item</h1>
+    <%= simple_form_for @item do |f| %>
+      <%= f.input :name %>
+      <%= f.input :item_price %>
+      <%= f.input :item_description %>
+      <%= f.input :photo, as: :file %>
+      <div class="d-flex justify-content-between my-4">
+        <%= f.submit class: 'btn btn-ghost ml-0' %>
+        <%= link_to 'Back', items_path, class:"btn btn-ghost mr-0"%>
+      </div>
+    <% end %>
+  </div>
+</div>
