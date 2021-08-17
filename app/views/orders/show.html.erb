@@ -1,0 +1,9 @@
+<h3>Please confirm your order:</h3>
+<table>
+<% @orders.items.each do |item| %>
+ <tr>
+  <td><%= item.name %></td>
+  <td><%= item.item_price %></td>
+  <td><%= item.item_quantity %></td>
+ </tr>
+</table>
