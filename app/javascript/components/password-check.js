@@ -14,7 +14,7 @@ schema
 
 
 const checkPassword = () => {
-  const passwordBox = document.getElementsByClassName('password required')[0];
+  const passwordBox = document.getElementsByClassName('form-control password required')[0];
   passwordBox.addEventListener('keyup', (_event) => {
     const password = document.getElementById('user_password').value;
     const checks = schema.validate(password, { list: true });
