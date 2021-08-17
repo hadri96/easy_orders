@@ -1,0 +1,15 @@
+.btn-dark-blue {
+  color: #F9F9F9;
+  background: #0B3954;
+  text-decoration: none;
+  padding: 5px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 70%;
+}
+
+.btn-dark-blue:hover {
+  opacity: 0.6;
+}

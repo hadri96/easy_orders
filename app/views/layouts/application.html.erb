@@ -16,11 +16,17 @@
   </head>
 
   <body>
-    <button type="button" class="btn btn-link mb-2" data-toggle="modal" data-target="#exampleModal">
-      Launch demo modal
-    </button>
-    <%= render "shared/navbar" %>
-    <%= render "shared/cart" %>
+
+    <% unless ['new'].include?(action_name) %>
+      <%= render "shared/navbar" %>
+    <% end %>
+    <% unless ['new'].include?(action_name) %>
+      <button type="button" class="btn btn-link mb-2" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+      <%= render "shared/cart" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
