@@ -1,43 +1,65 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :username,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "username" }%>
-    <%= f.input :first_name,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "first name" }%>
-    <%= f.input :last_name,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "last name" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                input_html: { autocomplete: "new-password" },
-                error: false %>
-    <p class="form-hint lower-password">❌ Contains lowercase</p>
-    <p class="form-hint upper-password">❌ Contains uppercase</p>
-    <p class="form-hint digits-password">❌ Contains digits</p>
-    <p class="form-hint symbols-password">❌ Contains symbols</p>
-    <p class="form-hint length-password">❌ Has minimum 8 characters</p>
-
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="banneruser">
+</div>
+<div class="ctn">
+  <h3>Sign up</h3>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :username,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  placeholder: 'Username',
+                  input_html: { class: "input" }%>
+      <%= f.input :first_name,
+                  required: false,
+                  autofocus: true,
+                  label: false,
+                  placeholder: 'First name',
+                  input_html: { class: "input" }%>
+      <%= f.input :last_name,
+                  required: false,
+                  autofocus: true,
+                  label: false,
+                  placeholder: 'Last name',
+                  input_html: { class: "input" }%>
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  label: false,
+                  placeholder: 'Email',
+                  input_html: { class: "input" }%>
+                  <p class="form-hint lower-password">❌ Contains lowercase</p>
+                  <p class="form-hint upper-password">❌ Contains uppercase</p>
+                  <p class="form-hint digits-password">❌ Contains digits</p>
+                  <p class="form-hint symbols-password">❌ Contains symbols</p>
+                  <p class="form-hint length-password">❌ Has minimum 8 characters</p>
+      <%= f.input :password,
+                  required: true,
+                  label: false,
+                  placeholder: 'Password',
+                  input_html: { class: "input" },
+                  error: false %>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  label: false,
+                  placeholder: 'Password confirmation',
+                  placeholder: 'Password confirmation',
+                  input_html: { class: "input" } %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "btn-dark-blue" %>
+    </div>
+  <% end %>
+</div>
+<br>
+<div class="ctn-new-page">
+  <hr>
+  <div class="icon">
+    <i class="fab fa-facebook" id="facebook"></i>
+    <i class="fab fa-google" id="google"></i>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="links">
+    <p>Do you want to <%= link_to "Log in", new_session_path(resource_name) %></p>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
