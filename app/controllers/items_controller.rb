@@ -18,10 +18,12 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @ingredients = Ingredient.all
   end
 
   def create
     @item = Item.new(item_params)
+    raise
     @item.user = current_user
     if @item.save
       redirect_to item_path(@item)
@@ -55,7 +57,11 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :item_price, :item_description, :photo)
+    params.require(:item).permit(:name, :item_price, :item_description, :photo, :ingredient)
+  end
+
+  def ingredient_params
+    params.require(:ingredient).permit(:name)
   end
 
 end

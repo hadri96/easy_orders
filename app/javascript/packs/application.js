@@ -4,11 +4,12 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
+require("@nathanvda/cocoon")
 
-
+//= require cocoon
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -21,17 +22,19 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
-import { checkPassword } from '../components/password-check';
+
 
 // External imports
 import "bootstrap";
+import 'select2';
+
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initSelect2 } from '../components/init_select2';
+import { checkPassword } from '../components/password-check';
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Call your functions here, e.g:
-  // initSelect2();
+  initSelect2();
+  checkPassword();
 });
-
-checkPassword();
