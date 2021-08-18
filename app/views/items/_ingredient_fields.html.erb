@@ -1,0 +1,11 @@
+<div class='nested-fields'>
+    <div>
+      <select class="form-control ingredient-select" name="item[ingredient][]" multiple="multiple">
+        <% @ingredients.each do |ingredient| %>
+        <option><%= ingredient.name %></option>
+      </select>
+      <% end %>
+    </div>
+</div>
+
+
