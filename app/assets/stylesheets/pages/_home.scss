@@ -1,1 +1,17 @@
-// Specific CSS for your home-page
+.img1 {
+  height: 226px;
+  width: 226px;
+}
+
+.img2 {
+  height: 226px;
+  width: 226px;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  text-align: center;
+}
