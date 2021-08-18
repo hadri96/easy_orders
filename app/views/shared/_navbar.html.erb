@@ -11,14 +11,20 @@
     </button>
 
   </nav>
+
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
+    <div>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered", alt: "avatar-bordered" %>
+      <%# <%= @user.user_name %>
       <ul>
-        <li><%= link_to "Home", "#", class: "dropdown-item" %></li>
-        <li><%= link_to "My orders", "#", class: "dropdown-item" %></li>
-        <li><%= link_to "Account", "#", class: "dropdown-item" %></li>
-        <li><%= link_to "Log out", "#", method: :delete, class: "dropdown-item" %></li>
-      </ul>
+        <%= link_to "Home", "#", class: "dropdown-item" %>
+        <%= link_to "My orders", "#", class: "dropdown-item" %>
+        <%= link_to "Account", "#", class: "dropdown-item" %>
+        <%= link_to "Log out", "#", method: :delete, class: "dropdown-item" %>
+        <div class="logos">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
     </div>
   </div>
 </div>

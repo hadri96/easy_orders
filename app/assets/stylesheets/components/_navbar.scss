@@ -25,3 +25,31 @@
 .my_navbar {
   justify-content: space-evenly;
 }
+
+.collapse {
+  background-color: rgba(255,102,99,0.8);
+  width: 260px;
+  height: 359px;
+  font-size: 36px;
+  color: #30475E;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.avatar-bordered {
+  width: 69px;
+  border-radius: 50%;
+  box-shadow: 3px 4px 4px rgba(0,0,0,0.25);
+  margin-left: 20px;
+  margin-top: 20px;
+  border: transparent;
+  margin-bottom: 4px;
+}
+
+.dropdown-item {
+  padding: 0px;
+}
+
+.fa-facebook {
+  padding: 7px;
+}
