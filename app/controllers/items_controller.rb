@@ -25,9 +25,12 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    raise
-    @item.user = current_user
+    #@item.user = current_user
     if @item.save
+      @ingredients = params['item']['ingredient'].each do |ingredient|
+        ingredient = Ingredient.find_or_create_by(name: ingredient)
+        IngredientList.new(ingredient_id: ingredient.id, item_id: @item.id).save!
+      end
       redirect_to item_path(@item)
     else
       render :new
@@ -63,7 +66,7 @@ class ItemsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:name)
+    params.require(:ingredient).permit(:photo)
   end
 
 end
