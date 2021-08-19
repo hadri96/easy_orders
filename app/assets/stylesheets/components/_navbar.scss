@@ -1,5 +1,4 @@
   #nav-home {
-  background: #343a40;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 0 20px;
@@ -8,25 +7,34 @@
   font-size: 24px;
   height: 51px;
   padding: 18px;
+  background-color: #0B3954;
 }
 
 .fixed-top {
   height: 38px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  background-color: #0B3954;
 }
 .navbar-toggler {
   background-color: white;
   height: 42px;
   border-radius: 100%;
   width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  padding-top: 14px;
 }
 
 .my_navbar {
   justify-content: space-evenly;
 }
 
-.collapse {
+.menu-display {
   background-color: rgba(255,102,99,0.8);
   width: 260px;
   height: 359px;

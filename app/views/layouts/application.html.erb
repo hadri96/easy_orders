@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <% unless ['new'].include?(action_name) %>
+    <% unless ["new","thanks_message"].include?(action_name) %>
       <%= render "shared/navbar" %>
     <% end %>
     <% unless ['new'].include?(action_name) %>

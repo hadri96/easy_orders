@@ -1,0 +1,54 @@
+.banneruser {
+  background-color: #0B3954;
+  background-image: url('easyorder-logo.png');
+  background-size: 255px 71px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 29vh;
+  border-radius: 0 0 0 50px;
+  filter: drop-shadow(2px 2px 3px #0B3954);
+}
+
+.message {
+  color: #0B3954;
+  background-color: #46B4BF;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 50vh;
+  justify-content: center;
+  font-size: 24px;
+  margin: 9% 5% 7% 5%;
+  border-radius: 15px;
+}
+
+.btn-dark-blue {
+  color: #F9F9F9;
+  background: #0B3954;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  height: 49px;
+  width: 267px;
+  margin-bottom: 31px;
+}
+
+.btn-dark-blue:hover {
+  opacity: 0.6;
+}
+
+.message_and_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-dark-blue a {
+  color: white;
+  font-size: 23px;
+}

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :items
   resources :order_lists
   resources :orders, only: [:show]
-  get '/orders/payment_method', to: 'orders#payment'
-  get '/orders/payment_confirmation', to: 'orders#payment'
-  get '/orders/thanks_message', to: 'orders#payment'
+  get '/orders/payment_method', to: 'orders#payment_method'
+  get '/orders/payment_confirmation', to: 'orders#payment_confirmation'
+  get '/orders/:id/thanks_message', to: 'orders#thanks_message'
 end

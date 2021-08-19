@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
+
+    @categories = @items.group(:category).count.keys
   end
 
   def show
@@ -64,7 +66,7 @@ class ItemsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:name)
+    params.require(:ingredient).permit(:photo)
   end
 
 end
