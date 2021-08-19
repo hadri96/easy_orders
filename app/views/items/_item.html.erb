@@ -1,0 +1,15 @@
+
+
+<div class="modal-item">
+  <p><%= @item.name %></p>
+  <p><%= @item.item_price %> CHF</p>
+</div>
+<div id="modal-counter">
+  <%= simple_form_for @order_list, remote: true do |f| %>
+    <%# <p class="modal-button">-</p> %>
+    <%= f.input :item_quantity, input_html: { max: 200, min: 1 }%>
+    <%= f.input :item_id, as: :hidden, input_html: { value: @item.id } %>
+    <%= f.submit class: 'btn btn-dark-blue ml-0' %>
+    <%# <p class="modal-button">+</p> %>
+  <% end %>
+</div>

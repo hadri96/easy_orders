@@ -9,7 +9,7 @@
 <div class="container text-center" style="margin-top: 130px;">
   <div class="items-list">
    <% @items.each do |item| %>
-      <%= link_to item_path(item) do %>
+      <%= link_to item_path(item), remote: true do %>
         <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= item.picture_url %>); background-position: 20% 20%; height: 350px; width: 100%; padding-top: 75%;">
           <h2><%= item.name%></h2>
           <h5><%= item.item_price%> CHF</h5>

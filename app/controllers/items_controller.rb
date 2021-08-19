@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    # @order = Order.new
+    @order_list = OrderList.new
   end
 
   def new
