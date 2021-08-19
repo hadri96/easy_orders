@@ -1,0 +1,43 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 73vh;
+  align-items: center;
+}
+
+.card {
+  height: 109px;
+  width: 278px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 3px 4px 4px lightgrey;
+}
+
+.card1 {
+  background-color: white;
+}
+
+.card1 a {
+  color: #46B4BF;
+}
+
+.card2 {
+  background-color: #46B4BF;
+}
+
+.card2 a {
+  color: white;
+}
+
+.card3 {
+  background-color: #222831;
+}
+
+.card3 a {
+  color: #F05454;
+}
