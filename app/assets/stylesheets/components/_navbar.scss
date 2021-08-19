@@ -21,13 +21,20 @@
   height: 42px;
   border-radius: 100%;
   width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  padding-top: 14px;
 }
 
 .my_navbar {
   justify-content: space-evenly;
 }
 
-.collapse {
+.menu-display {
   background-color: rgba(255,102,99,0.8);
   width: 260px;
   height: 359px;
@@ -53,8 +60,4 @@
 
 .fa-facebook {
   padding: 7px;
-}
-
-.navbar-toggler-icon {
-
 }
