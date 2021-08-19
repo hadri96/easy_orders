@@ -64,7 +64,7 @@ class ItemsController < ApplicationController
   end
 
   def ingredient_params
-    params.require(:ingredient).permit(:name)
+    params.require(:ingredient).permit(:photo)
   end
 
 end
