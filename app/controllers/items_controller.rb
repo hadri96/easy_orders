@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
+
+    @categories = @items.group(:category).count.keys
   end
 
   def show
