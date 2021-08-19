@@ -1,19 +1,30 @@
 <div class="ctn-show">
-  <h3>Please confirm your order:</h3>
-  <table>
-  <% @order.items.each do |item| %>
-    <tr>
-      <td><%= item.name %></td>
-      <td><%= item.item_price %></td>
-    </tr>
-    </table>
-  <% end %>
-
+  <div class="pay-process">
+    <i class="fas fa-play"></i>
+    <i id="grey" class="fas fa-ellipsis-h"></i>
+    <i  id="grey" class="fas fa-credit-card"></i>
+    <i  id="grey" class="fas fa-ellipsis-h"></i>
+    <i  id="grey" class="fas fa-check-circle"></i>
+  </div>
+  <div class="ctn-show-infos">
+    <h4>Please confirm your order:</h4>
+    <div class="ctn-show-list"> 
+      <% @order.items.each do |item| %>
+        <div class="ctn-show-items">
+        <i class="far fa-hand-point-up"></i>
+        <p class="show-item-name"><%= item.name %></p>
+        <p><%= item.item_price %></p>
+        </div>
+      <% end %>
+      <div class="total">
+        <h4>Total</h4>
+        <%= @order.items.sum(&:item_price) %>
+      </div>
+    </div>
+  </div>
   <% link_to "Pay now", "#" %>
   <% link_to "Back", "#" %>
   <% link_to "Cancel order", "#" %>
-  <i class="far fa-play"></i>
-  <i class="fas fa-credit-card"></i>
-  <i class="fas fa-check-circle"></i>
-  <i class="far fa-hand-point-up"></i>
 </div>
+
+<i class="far fa-hand-point-up"></i>
