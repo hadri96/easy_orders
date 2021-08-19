@@ -2,14 +2,13 @@
 </div>
 
 <div class="card-product">
-  <img src=" <%= asset_url("showbanner.jpg") %>" alt="castle">
   <div class="card-product-infos">
-    <% if @item.photo.attached? %>
-      <img id="demoObject" src= <%= cl_image_path(@item.photo.key) %>>
-    <% else %>
-      <img id="demoObject" src= <%= image_url(@item.picture_url) %>>
-    <% end %>
-    <div class="text">   
+    <%# <% if @item.photo.attached? %> %>
+      <%# <img id="demoObject" src= <%= cl_image_path(@item.photo.key) %>> %>
+    <%# <% else %> %>
+      <%# <img id="demoObject" src= <%= image_url(@item.picture_url) %>> %>
+    <%# <% end %> %>
+    <div class="text">
       <h1><%= @item.name %><br></h1>
       <div class="info">
         <p><i class="fas fa-coins"></i> <%= @item.item_price %>.-<br></p>
@@ -20,14 +19,14 @@
   </div>
 </div>
 
-<% if current_user == @item.user %>
+<%# <% if current_user == @item.user %> %>
   <div class="d-flex justify-content-between my-4">
     <%= link_to 'Edit', edit_item_path(@item), class:"btn btn-ghost mr-0" %>
     <%= link_to 'Destroy', @item, class:"btn btn-ghost mr-0", method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
-<% else %>
+<%# <% else %> %>
   <div class="d-flex justify-content-center my-4">
     <%= link_to 'Book this item', new_item_order_path(@item), class:"btn btn-ghost mr-0"%>
   </div>
-<% end %>
+<%# <% end %> %>
 </div>
