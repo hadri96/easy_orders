@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   end
   
   def thanks_message
-    
+    @order = Order.find(params[:id])
   end
   
   
