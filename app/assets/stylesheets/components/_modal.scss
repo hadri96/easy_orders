@@ -1,0 +1,23 @@
+.modal-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-button {
+  display: flex;
+  border-radius: 50%;
+  color: $white;
+  background-color: $light-blue;
+  padding: 3px;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  &:hover {
+    background-color: $dark-blue;
+  }
+}
+
+.modal-counter {
+  display: flex;
+}
