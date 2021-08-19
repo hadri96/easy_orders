@@ -1,18 +1,20 @@
+<div class="">
 <h3>Please confirm your order:</h3>
 <table>
-<% @orders.items.each do |item| %>
+<% @order.items.each do |item| %>
  <tr>
   <td><%= item.name %></td>
-  <td><%= item.item_quantity %></td>
   <td><%= item.item_price %></td>
  </tr>
 </table>
 
+<% end %>
 
-<% link_to "Pay now", "#" %>
-<% link_to "Back", :back %>
-<% link_to "Cancel order", "#" %>
-<i class="far fa-play"></i> --> #FF6663
+<% link_to "Pay now", "#",  %>
+<% link_to "Back", "#",  %>
+<% link_to "Cancel order", "#",  %>
+<i class="far fa-play"></i>
 <i class="fas fa-credit-card"></i>
 <i class="fas fa-check-circle"></i>
 <i class="far fa-hand-point-up"></i>
+</div>
