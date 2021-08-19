@@ -1,23 +1,23 @@
 <div class="ctn-menu">
-<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%#= asset_url("index_banner.jpg") %>);">
-  <div>
-    <h1 id="title-index">Items</h1>
-    <h3>what we have to offer :</h3>
-  </div>
-</div>
-
-<div class="container text-center" style="margin-top: 130px;">
-  <div class="items-list">
-   <% @items.each do |item| %>
-      <%= link_to item_path(item) do %>
-        <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= item.picture_url %>); background-position: 20% 20%; height: 350px; width: 100%; padding-top: 75%;">
-          <h2><%= item.name%></h2>
-          <h5><%= item.item_price%> CHF</h5>
+  <h4>What we have to offer :</h4>
+    <% @categories.each do |category| %>
+      <div class="items-list">
+        <h3><%= category.capitalize %></h3>
+        <div class="item-wrapper">
+          <% @items.where(category: category).each do |item| %>
+            <div class="item-inner">
+              <%= link_to item_path(item), :class => "link-to" do %>
+                <%= image_tag item.picture_url, :class => "item-image" %>
+                <p><%= item.name%></p>
+                <p><%= item.item_price%> CHF</p>
+              <% end %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-  <% end %>
-  </div>
+      </div> 
+    <% end %>
+</div>
+<div class="end-page-with-btn">
+  <%= link_to 'Checkout', new_item_path, class: "btn-dark-blue" %>
+<div>
 
-  <%= link_to 'Create a item', new_item_path, class: "btn btn-ghost mt-4 mb-4" %>
-</div>
-</div>
