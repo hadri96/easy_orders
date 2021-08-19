@@ -40,7 +40,7 @@ gem 'devise-security'
 gem 'omniauth', '~> 2.0', '>= 2.0.4'
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection'
-
+gem 'cloudinary', '~> 1.16.0'
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
