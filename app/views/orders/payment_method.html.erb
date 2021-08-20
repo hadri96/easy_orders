@@ -1,8 +1,31 @@
-<h2>Select your payment method:</h2>
-<i class="far fa-play"></i> --> #FF6663
-<i class="fas fa-credit-card"></i>
-<i class="fas fa-check-circle"></i>
-<% link_to "Back", :back %>
-<% link_to "Back", :back %>
-<% link_to "Back", :back %>
-<% link_to "Back", :back %>
+<div class="banneruser">
+</div>
+<div class="ctn-show-pay">
+  <div class="pay-process">
+    <i class="fas fa-play"></i>
+    <i class="fas fa-ellipsis-h"></i>
+    <i class="fas fa-credit-card"></i>
+    <i id="grey" class="fas fa-ellipsis-h"></i>
+    <i id="grey" class="fas fa-check-circle"></i>
+  </div>
+  <div class="ctn-show-infos-pay">
+    <h4>Select your payment method:</h4>
+    <div class="ctn-show-list-pay"> 
+      <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("paypal-logo.png", class: 'img-payment') %>
+        </div>
+        <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("twint-logo.png", class: 'img-payment') %>
+        </div>
+        <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("mastervisa-logo.png", class: 'img-payment') %>
+      </div>
+    </div>
+    <div class="btn-show-end-page-pay">
+      <%= link_to "Confirmation", thanks_message_path, class: "btn-dark-blue-show-pay" %>
+    </div>
+  </div>
+</div>
