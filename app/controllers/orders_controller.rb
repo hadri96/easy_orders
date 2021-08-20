@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
   end
   
   def payment_confirmation
-    
+    @order = Order.find(params[:id])
   end
   
   def thanks_message
