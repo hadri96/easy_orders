@@ -10,8 +10,8 @@ class ItemsController < ApplicationController
     else
       @items = Item.all
     end
-
     @categories = @items.group(:category).count.keys
+    @order = Order.find_by(user_id: current_user, is_confirmed: false)
   end
 
   def show

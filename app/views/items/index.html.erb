@@ -6,7 +6,7 @@
         <div class="item-wrapper">
           <% @items.where(category: category).each do |item| %>
             <div class="item-inner">
-              <%= link_to item_path(item), :class => "link-to" do %>
+              <%= link_to item_path(item), remote: true do %>
                 <%= image_tag item.picture_url, :class => "item-image" %>
                 <p><%= item.name%></p>
                 <p><%= item.item_price%> CHF</p>
@@ -14,9 +14,11 @@
             </div>
           <% end %>
         </div>
-      </div> 
+      </div>
     <% end %>
 </div>
+<% unless @order.nil? %>
 <div class="end-page-with-btn">
-  <%= link_to 'Checkout', order_path, class: "btn-dark-blue" %>
+  <%= link_to 'Checkout', order_path(@order.id), class: "btn-dark-blue" %>
 </div>
+<% end %>
