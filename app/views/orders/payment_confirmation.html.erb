@@ -1,4 +1,31 @@
-<h2>Hey <%= current_user.name %>!</h2><br>
-<h2>Thank you for your purchase</h2>
-<% link_to "Follow my order", "#" %>
-<% link_to "Account", "#" %>
+<div class="banneruser">
+</div>
+<div class="ctn-show-pay">
+  <div class="pay-process">
+    <i class="fas fa-play"></i>
+    <i class="fas fa-ellipsis-h"></i>
+    <i class="fas fa-credit-card"></i>
+    <i id="grey" class="fas fa-ellipsis-h"></i>
+    <i id="grey" class="fas fa-check-circle"></i>
+  </div>
+  <div class="ctn-show-infos-pay">
+    <h4>Select your payment method:</h4>
+    <div class="ctn-show-list-pay"> 
+      <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("paypal-logo.png", class: 'img-payment') %>
+        </div>
+        <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("twint-logo.png", class: 'img-payment') %>
+        </div>
+        <div class="info-pay">
+        <i class="far fa-circle"></i>
+        <%= image_tag("mastervisa-logo.png", class: 'img-payment') %>
+      </div>
+    </div>
+    <div class="btn-show-end-page-pay">
+      <%= link_to "Confirmation", '#', class: "btn-dark-blue-show-pay" %>
+    </div>
+  </div>
+</div>
