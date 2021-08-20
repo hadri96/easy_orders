@@ -12,14 +12,14 @@
 
   </nav>
 
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="menu-display">
+  <div class="collapse menu-display" id="navbarToggleExternalContent">
+    <div class="">
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered", alt: "avatar-bordered" %>
       <%# <%= @user.user_name %>
       <ul>
         <%= link_to "Home", "#", class: "dropdown-item" %>
         <%= link_to "My orders", "#", class: "dropdown-item" %>
-        <%= link_to "Account", edit_user_registration_path, class: "dropdown-item" %>
+        <%= link_to "Account", my_orders_path(@order), class: "dropdown-item" %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <div class="logos">
           <i class="fab fa-facebook"></i>
