@@ -7,11 +7,47 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+OrderList.destroy_all
+Order.destroy_all
 Item.destroy_all
+IngredientList.destroy_all
+Ingredient.destroy_all
+User.destroy_all
+
+
+colin = User.new({
+  username: 'colinmalin',
+  first_name: 'Colin',
+  last_name: 'Schmidt',
+  email: 'colin.schmidt@gmail.com',
+  password: 'Picasso96*'
+})
+
+colin.save
+
+alex = User.new({
+  username: 'alexflex',
+  first_name: 'Alexandre',
+  last_name: 'Stutz',
+  email: 'alex04@gmail.com',
+  password: 'Picasso96*'
+})
+
+alex.save
+
+hadrien = User.new({
+  username: 'hadri96',
+  first_name: 'Hadrien',
+  last_name: 'Morand',
+  email: 'hadrienmorand@hotmail.com',
+  password: 'Picasso96*'
+})
+
+hadrien.save
 
 5.times do
   item = Item.new({
-    name: Faker::Beer.brand,
+    name: Faker::Beer.unique.brand,
     item_price: (5..7).to_a.sample,
     category: 'beer',
     picture_url: 'https://marketingweek.imgix.net/content/uploads/2019/04/12174523/Carlsberg-pilsner.png'
