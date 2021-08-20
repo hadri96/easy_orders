@@ -8,7 +8,7 @@
   </div>
   <div class="ctn-show-infos">
     <h4>Please confirm your order:</h4>
-    <div class="ctn-show-list"> 
+    <div class="ctn-show-list">
       <% @order.items.each do |item| %>
         <div class="ctn-show-items">
         <i class="far fa-hand-point-up"></i>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="btn-show-end-page">
-      <%= link_to "Pay now", payment_method_path, class: "btn-dark-blue-show" %>
+      <%= link_to "Pay now", payment_method_path(params[:id]), class: "btn-dark-blue-show" %>
       <%= link_to "Back", '#', class: "btn-dark-blue-show" %>
       <%= link_to "Cancel order", '#', class: "btn-dark-blue-show" %>
     </div>

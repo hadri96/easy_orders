@@ -1,0 +1,47 @@
+.ctn-edit {
+  color: #0B3954;
+  margin: 0 auto;
+  padding: 26% 15% 0% 15%;
+}
+
+.ctn-edit a {
+  font-size: 11px;
+  color: #46B4BF;
+}
+
+.ctn-edit h3 {
+  padding-bottom: 4%;
+}
+
+.ctn-delete {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-end-page-edit-profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-dark-blue-edit {
+  color: #F9F9F9;
+  background: #0B3954;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  height: 49px;
+  width: 267px;
+  margin-bottom: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-dark-blue-edit:hover {
+  opacity: 0.6;
+}
