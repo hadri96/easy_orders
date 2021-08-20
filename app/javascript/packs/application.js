@@ -31,10 +31,12 @@ import 'select2';
 // Internal imports, e.g:
 import { initSelect2 } from '../components/init_select2';
 import { checkPassword } from '../components/password-check';
+import { selectPayment } from '../components/payment_selection';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Call your functions here, e.g:
   initSelect2();
   checkPassword();
+  selectPayment();
 
 });

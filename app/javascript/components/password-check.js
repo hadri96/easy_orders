@@ -15,15 +15,16 @@ schema
 
 const checkPassword = () => {
   const passwordBox = document.getElementsByClassName('form-control password required')[0];
-  passwordBox.addEventListener('keyup', (_event) => {
-    const password = document.getElementById('user_password').value;
-    const checks = schema.validate(password, { list: true });
-    checkLowercase(checks);
-    checkUppercase(checks);
-    checkDigits(checks);
-    checkSymbols(checks);
-    checkLength(checks);
-  });
+  if (passwordBox) {
+    passwordBox.addEventListener('keyup', (_event) => {
+      const password = document.getElementById('user_password').value;
+      const checks = schema.validate(password, { list: true });
+      checkLowercase(checks);
+      checkUppercase(checks);
+      checkDigits(checks);
+      checkSymbols(checks);
+      checkLength(checks);
+  })};
 };
 
 const checkLowercase = (list) => {
