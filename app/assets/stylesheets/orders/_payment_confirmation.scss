@@ -1,5 +1,14 @@
-.ctn-show-pay {
-  padding-top: 10%;
+.banneruser-pay-conf {
+  background-color: #0B3954;
+  background-image: url('easyorder-logo.png');
+  background-size: 255px 71px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 29vh;
+}
+
+.ctn-show-pay-conf {
+  padding-top: 20%;
   color: #FFFFFF;
 }
 
@@ -7,64 +16,69 @@
   color: lightgray;
 }
 
-.ctn-show-infos-pay {
+.ctn-show-infos-pay-conf {
   color: #0B3954;
-  margin-top: 10%;
-  background-color: white;
-  height: 65vh;
+  margin-top: -40%;
+  background-color: #F9F9F9;
+  height: 85vh;
   border-radius: 15px 15px 0px 0px;
   padding-left: 25px;
   padding-right: 25px;
-  border-style: solid;
-  border-color: #FF6663;
-  border-bottom-color: white;
+  padding-top: 26%;
 }
 
-.ctn-show-infos-pay h4 {
+.ctn-show-infos-pay-conf h5 {
   padding-top: 30px;
   display: flex;
   justify-content: flex-start;
+  padding-top: 6%;
+  padding-bottom: 6%;
 }
 
-.ctn-show-infos-pay hr {
+.ctn-show-infos-pay-conf hr {
   color: #FFFFFF;
   width: 80%;
 }
 
-.ctn-show-list-pay {
+.ctn-show-list-pay-conf {
   display: flex;
   flex-direction: column;
-  height: 40vh;
-  justify-content: space-evenly;
 }
 
-.ctn-show-items-pay {
+.ctn-show-items-pay-conf {
   flex-direction: row;
   justify-content: flex-start;
   display: flex;
   text-decoration: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #0B3954;
   padding-top: 15px;
 }
 
-.ctn-show-list-pay i {
+.ctn-show-list-pay-conf i {
   color: #FF6663;
   font-size: 25px;
 }
 
-.show-item-name-pay {
+.show-item-name-pay-conf {
   flex-grow: 1;
-  margin-left: 25px;
+  margin-left: 1px;
 }
 
-.btn-show-end-page-pay {
+.total-pay-conf {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-show-end-page-pay-conf {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6%;
+  padding-top: 30px;
 }
 
-.btn-dark-blue-show-pay {
+.btn-dark-blue-show-pay-conf {
   color: #F9F9F9;
   background: #0B3954;
   margin-bottom: 20px;
@@ -78,21 +92,6 @@
   width: 100%;
 }
 
-.btn-dark-blue-show-pay:hover {
+.btn-dark-blue-show-pay-conf:hover {
   opacity: 0.6;
-}
-
-.img-payment {
-  width: 150px;
-  padding-left: 12px;
-}
-
-.info-pay {
-  border-style: solid;
-  border-color: #FF6663;
-  border-radius: 8px;
-  padding: 7px 7px;
-  display: flex;
-  align-items: center;
-  border-width: thin;
 }
