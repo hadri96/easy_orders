@@ -10,7 +10,7 @@
 .ctn-show-infos {
   margin-top: 7%;
   background-color: #46B4BF;
-  height: 80vh;
+  height: 85vh;
   border-radius: 15px 15px 0px 0px;
   padding-left: 25px;
   padding-right: 25px;
@@ -55,4 +55,29 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+
+.btn-show-end-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.btn-dark-blue-show {
+  color: #F9F9F9;
+  background: #0B3954;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-size: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.btn-dark-blue-show:hover {
+  opacity: 0.6;
 }
