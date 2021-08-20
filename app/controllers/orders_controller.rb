@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
   
   def payment_method
-    
+    @order = Order.find(params[:id])
   end
   
   def payment_confirmation
