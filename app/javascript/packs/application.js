@@ -21,7 +21,8 @@ require("@nathanvda/cocoon")
 // ----------------------------------------------------
 
 
-
+import $ from 'jquery';
+global.$ = jQuery;
 // External imports
 import "bootstrap";
 import 'select2';
