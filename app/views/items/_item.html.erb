@@ -2,7 +2,7 @@
 
 <div class="modal-item">
   <p><%= @item.name %></p>
-  <p><%= @item.item_price %> CHF</p>
+  <p><%= round_price(@item.item_price) %> CHF</p>
 </div>
 <div id="modal-counter">
   <%= simple_form_for @order_list do |f| %>

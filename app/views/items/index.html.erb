@@ -9,7 +9,7 @@
               <%= link_to item_path(item), remote: true do %>
                 <%= image_tag item.picture_url, :class => "item-image" %>
                 <p><%= item.name%></p>
-                <p><%= item.item_price%> CHF</p>
+                <p><%= round_price(item.item_price)%> CHF</p>
               <% end %>
             </div>
           <% end %>

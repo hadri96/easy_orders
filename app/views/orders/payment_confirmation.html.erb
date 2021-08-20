@@ -12,16 +12,16 @@
 <div class="ctn-show-pay-conf">
   <div class="ctn-show-infos-pay-conf">
     <h5>Thank you <%= current_user.first_name %> for your order:</h5>
-    <div class="ctn-show-list-pay-conf"> 
+    <div class="ctn-show-list-pay-conf">
       <% @order.items.each do |item| %>
         <div class="ctn-show-items-pay-conf">
         <p class="show-item-name-pay-conf"><%= item.name %></p>
-        <p><%= item.item_price %></p>
+          <p><%= round_price(item.item_price) %> CHF</p>
         </div>
       <% end %>
       <div class="total-pay-conf">
         <h4>Total</h4>
-        <%= @order.items.sum(&:item_price) %>
+        <p><%= round_price(@order.items.sum(&:item_price)) %> CHF</p>
       </div>
     </div>
     <div class="btn-show-end-page-pay-conf">
