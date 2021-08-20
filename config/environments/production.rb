@@ -40,6 +40,8 @@ Rails.application.configure do
 
   config.active_storage.service = :cloudinary
 
+  config.action_mailer.default_url_options = { host: 'e-orders.herokuapp.com' }
+
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
