@@ -13,18 +13,17 @@
   </nav>
 
   <div class="collapse menu-display" id="navbarToggleExternalContent">
-    <div class="">
+    <div class="top-nav-menu">
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered", alt: "avatar-bordered" %>
-      <%# <%= @user.user_name %>
-      <ul>
-        <%= link_to "Home", "#", class: "dropdown-item" %>
-        <%= link_to "My orders", "#", class: "dropdown-item" %>
-        <%= link_to "Account", account_path, class: "dropdown-item" %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        <div class="logos">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
-        </div>
+      <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
+    </div>
+    <%= link_to "Home", root_path, class: "dropdown-item" %>
+    <%= link_to "My orders", my_orders_notification_path, class: "dropdown-item" %>
+    <%= link_to "Account", account_path, class: "dropdown-item" %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    <div class="logos">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
     </div>
   </div>
 </div>
