@@ -18,7 +18,7 @@
       <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
     </div>
     <%= link_to "Home", root_path, class: "dropdown-item" %>
-    <%= link_to "My orders", my_orders_notification_path, class: "dropdown-item" %>
+    <%= link_to "My orders", '#', class: "dropdown-item" %>
     <%= link_to "Account", account_path, class: "dropdown-item" %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     <div class="logos">
