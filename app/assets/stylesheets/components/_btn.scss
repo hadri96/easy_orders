@@ -6,11 +6,11 @@
   padding: 5px 24px;
   border-radius: 50px;
   font-size: 20px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
   width: 100%;
 }
 
-.btn-dark-blue:hover {
-  opacity: 0.6;
+.btn-dark-blue-index:active {
+  text-decoration: none;
+  color: #FF6663;
+  background: #0B3954;
 }
