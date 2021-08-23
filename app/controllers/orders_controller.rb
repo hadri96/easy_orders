@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
   end
 
   def my_orders
-    @order = Order.find(params[:id])
+    @orders = Order.all
   end
   
   def my_archives
