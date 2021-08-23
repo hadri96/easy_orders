@@ -1,0 +1,39 @@
+.avat {
+  height: 226px;
+  width: 226px;
+  border-radius: 50%;
+  box-shadow: 3px 4px 4px rgba(0,0,0,0.25);
+  border: transparent;
+  position: absolute;
+  margin-left: 0px;
+}
+
+.text {
+  width: 322px;
+  height: 395px;
+  background-color: #46B4BF;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 105px auto 18px auto;
+  border-radius: 15px;
+  justify-content: flex-end;  
+}
+
+.text h2 {
+  font-size: 24px;
+}
+
+#myorderh2 {
+  color: #46B4BF;
+  margin-top: 71px;
+  margin-left: 25px;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
