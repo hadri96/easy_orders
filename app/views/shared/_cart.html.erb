@@ -1,14 +1,21 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="cartModalLabel">My cart</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body" id="itemModalBody">
+        <% @order.order_lists.each do |order_list| %>
+          <div class="ctn-show-items">
+            <p class="show-item-name"><%= order_list.item_quantity %> X </p>
+            <p class="show-item-name"><%= order_list.item.name %> @ <%= round_price(order_list.item.item_price) %> CHF</p>
+            <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %> CHF</p>
+            <%= link_to 'x', @order_list, method: :delete, remote: true %>
+          </div>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
