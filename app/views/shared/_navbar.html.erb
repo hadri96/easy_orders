@@ -1,16 +1,14 @@
 <div class="fixed-top">
  <nav class="navbar my_navbar">
-    <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
     </button>
   <h1 id="nav-home">HOME</h1>
     <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#exampleModal">
       <i class="fa fa-shopping-cart"></i>
     </button>
-
   </nav>
-
-  <div class="collapse menu-display" id="navbarToggleExternalContent">
+  <div class="navbar-collapse collapse" id="navbarCollapse">
     <div class="top-nav-menu">
       <% if current_user.avatar.attached? %>
         <%= cl_image_tag(current_user.avatar.key, aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered") %>
@@ -20,7 +18,7 @@
       <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
     </div>
     <%= link_to "Home", root_path, class: "dropdown-item" %>
-    <%= link_to "My orders", my_orders_path, class: "dropdown-item" %>
+    <%# link_to "My orders", my_orders_path, class: "dropdown-item" %>
     <%= link_to "Account", account_path, class: "dropdown-item" %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     <div class="logos">
