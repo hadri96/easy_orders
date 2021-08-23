@@ -3,13 +3,15 @@
 <div class="contain">  
   <%= image_tag "my_orders_img.jpg", class: "avatar-bordered avat", alt: "avatar-bordered" %>
   <div class="text">
-    <h2><%= @order.id %></h2>
-    <span>----------------------</span>
-    <h2>A barman will take</h2>
-    <h2>your order soon.</h2>
-    <span>----------------------</span>
-    <h2>Wait for your</h2>
-    <h2>message notification.</h2>
+    <% @orders.each do |order| %>
+      <h2><%= order.id %></h2>
+      <span>----------------------</span>
+      <h2>A barman will take</h2>
+      <h2>your order soon.</h2>
+      <span>----------------------</span>
+      <h2>Wait for your</h2>
+      <h2>message notification.</h2>
+    <% end %>
   </div>
 </div>
 
