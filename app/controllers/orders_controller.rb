@@ -31,6 +31,14 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def my_orders
+    @order = Order.find(params[:id])
+  end
+  
+  def my_archives
+    @orders = Order.all
+  end
+
 
   def profile
     @order = Order.find(params[:id])
