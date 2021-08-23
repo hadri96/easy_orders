@@ -14,11 +14,11 @@
 
   <div class="collapse menu-display" id="navbarToggleExternalContent">
     <div class="top-nav-menu">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered", alt: "avatar-bordered" %>
+      <%= cl_image_tag @users.photo.key, width: 400, height: 300, crop: :fill, class: "avatar-bordered", alt: "avatar-bordered" %>
       <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
     </div>
     <%= link_to "Home", root_path, class: "dropdown-item" %>
-    <%= link_to "My orders", '#', class: "dropdown-item" %>
+    <%# link_to "My orders", '#', class: "dropdown-item" %>
     <%= link_to "Account", account_path, class: "dropdown-item" %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     <div class="logos">

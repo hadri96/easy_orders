@@ -22,23 +22,21 @@
   border-radius: 15px;
 }
 
-.btn-dark-blue {
+.btn-dark-blue-thanks {
   color: #F9F9F9;
   background: #0B3954;
-  text-decoration: none;
+  margin-bottom: 20px;
   text-align: center;
-  padding: 5px 24px;
+  padding: 8px 24px;
   border-radius: 50px;
   font-size: 20px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  height: 49px;
-  width: 267px;
-  margin-bottom: 31px;
+  width: 80%;
 }
 
-.btn-dark-blue:hover {
-  opacity: 0.6;
+.btn-dark-blue-thanks:active {
+  text-decoration: none;
+  color: #FF6663;
+  background: #0B3954;
 }
 
 .message_and_button {
@@ -46,9 +44,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.btn-dark-blue a {
-  color: white;
-  font-size: 23px;
 }
