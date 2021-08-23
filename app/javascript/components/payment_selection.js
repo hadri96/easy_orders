@@ -1,7 +1,5 @@
 const selectPayment = () => {
   const paymentMethods = document.getElementsByClassName('ctn-show-list-pay')[0];
-  console.log('coucou');
-  console.log(paymentMethods);
   if (paymentMethods) {
     const methodsIds = ['paypal', 'twint', 'mastervisa'];
     let len = methodsIds.length

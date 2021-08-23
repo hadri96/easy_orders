@@ -32,11 +32,12 @@ import 'select2';
 import { initSelect2 } from '../components/init_select2';
 import { checkPassword } from '../components/password-check';
 import { selectPayment } from '../components/payment_selection';
+import { editItemQuantity } from '../components/edit-item-quantity';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Call your functions here, e.g:
   initSelect2();
   checkPassword();
   selectPayment();
-
+  editItemQuantity();
 });
