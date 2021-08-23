@@ -1,15 +1,17 @@
-
-
 <div class="modal-item">
-  <p><%= @item.name %></p>
-  <p><%= round_price(@item.item_price) %> CHF</p>
+    <p><%= @item.name %></p>
+    <p><%= round_price(@item.item_price) %> CHF</p>
 </div>
-<div id="modal-counter">
-  <%= simple_form_for @order_list do |f| %>
-    <%# <p class="modal-button">-</p> %>
-    <%= f.input :item_quantity, input_html: { max: 200, min: 1 }%>
-    <%= f.input :item_id, as: :hidden, input_html: { value: @item.id } %>
-    <%= f.submit class: 'btn btn-dark-blue ml-0' %>
-    <%# <p class="modal-button">+</p> %>
+<div class="modal-fields">
+  <%= form_for @order_list do |f| %>
+    <div class="modal-edit">
+      <p class="modal-button" id="minus-button">-</p>
+      <%= f.number_field :item_quantity, class: 'number-field', id: 'item-quantity', in: 1..200, default: @order_list.item_quantity%>
+      <p class="modal-button" id="plus-button">+</p>
+    </div>
+    <div>
+      <%= f.hidden_field :item_id, value: @item.id %>
+    </div>
+    <%= f.submit 'Save', class: 'btn btn-dark-blue ml-0 mb-2' %>
   <% end %>
 </div>

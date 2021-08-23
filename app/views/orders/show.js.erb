@@ -1,0 +1,5 @@
+document.getElementById('itemModalBody').innerHTML = '<%= escape_javascript(render("../items/item", item:@item)) %>';
+
+document.getElementById('itemModalLabel').innerHTML = '<%= escape_javascript(render("../items/item_title", item:@item)) %>';
+
+$('#itemModal').modal('show');

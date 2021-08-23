@@ -1,6 +1,7 @@
 .modal-item {
   display: flex;
   justify-content: space-between;
+  max-width: 300px;
 }
 
 .modal-button {
@@ -13,6 +14,7 @@
   width: 20px;
   height: 20px;
   align-items: center;
+  margin: 0;
   &:hover {
     background-color: $dark-blue;
   }
@@ -20,4 +22,22 @@
 
 .modal-counter {
   display: flex;
+}
+
+.modal-edit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 150px;
+}
+
+.number-field {
+  max-width: 50px;
+  margin: 0 10px;
+}
+
+.modal-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -9,11 +9,12 @@
   <div class="ctn-show-infos">
     <h4>Please confirm your order:</h4>
     <div class="ctn-show-list">
-      <% @order.items.each do |item| %>
+      <% @order.order_lists.each do |order_list| %>
         <div class="ctn-show-items">
-        <i class="far fa-hand-point-up"></i>
-        <p class="show-item-name"><%= item.name %></p>
-        <p><%= round_price(item.item_price) %> CHF</p>
+        <%= link_to item_path(order_list.item), remote: true %>
+        <p class="show-item-name"><%= order_list.item_quantity %> X </p>
+        <p class="show-item-name"><%= order_list.item.name %> @ <%= round_price(order_list.item.item_price) %> CHF</p>
+        <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %> CHF</p>
         </div>
       <% end %>
       <div class="total">
