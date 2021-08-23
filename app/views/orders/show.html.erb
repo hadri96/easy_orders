@@ -11,7 +11,7 @@
     <div class="ctn-show-list">
       <% @order.order_lists.each do |order_list| %>
         <div class="ctn-show-items">
-        <%= link_to item_path(order_list.item), remote: true %>
+        <i class="far fa-hand-point-up"><% link_to item_path(order_list.item), remote: true %></i>
         <p class="show-item-name"><%= order_list.item_quantity %> X </p>
         <p class="show-item-name"><%= order_list.item.name %> @ <%= round_price(order_list.item.item_price) %> CHF</p>
         <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %> CHF</p>
