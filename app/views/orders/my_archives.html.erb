@@ -1,0 +1,10 @@
+<div class="black-back">
+  <h2 id="myarchivesh2">My Archives</h2>
+  <div class="archives">
+    <% @orders.each do |order| %>
+      <div class="archive">
+        <%= order.created_at %> | <%= order.calculate_price %>.-
+      </div>
+    <% end %>
+  </div>
+</div>
