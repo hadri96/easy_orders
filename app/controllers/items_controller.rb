@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   # skip_before_action :authenticate_user!, only:[:index, :show]
 
   def index
+    @current_order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false)
     if params[:query].present?
       @items = Item.similarity_like(params[:query])
     else

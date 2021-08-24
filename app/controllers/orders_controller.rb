@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
   end
 
   def account
-    @order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false)
+    @current_order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false)
     @orders = current_user.orders
     @user = current_user
   end
