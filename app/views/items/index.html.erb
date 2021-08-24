@@ -17,7 +17,7 @@
       </div>
     <% end %>
 </div>
-<% unless @order.nil? %>
+<% unless @order.order_lists.empty? || @order.nil? %>
 <div class="end-page-with-btn">
   <%= link_to 'Checkout', order_path(@order.id), class: "btn-dark-blue-index" %>
 </div>

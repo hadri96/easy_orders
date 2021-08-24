@@ -8,7 +8,6 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="ctn-show-list">
         <% if @order.nil? || @order.order_lists.empty? %>
           <h6>Empty cart</h6>
           <p>Please make sure to select an item before consulting your cart</p>
@@ -26,7 +25,6 @@
             <h4>Total</h4>
             <p><%= round_price(@order.calculate_price) %> CHF</p>
           </div>
-        </div>
         <% end %>
       </div>
       <div class="modal-footer">
