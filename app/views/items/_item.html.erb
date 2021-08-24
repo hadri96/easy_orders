@@ -1,17 +1,19 @@
-<div class="modal-item">
-    <p><%= @item.name %></p>
-    <p><%= round_price(@item.item_price) %> CHF</p>
-</div>
-<div class="modal-fields">
-  <%= form_for @order_list do |f| %>
-    <div class="modal-edit">
-      <p class="modal-button" id="minus-button">-</p>
-      <%= f.number_field :item_quantity, class: 'number-field', id: 'item-quantity', in: 1..200, value: @order_list.item_quantity %>
-      <p class="modal-button" id="plus-button">+</p>
-    </div>
-    <div>
-      <%= f.hidden_field :item_id, value: @item.id %>
-    </div>
-    <%= f.submit 'Save', class: 'btn btn-dark-blue ml-0 mb-2' %>
-  <% end %>
+<div class="container-modal">
+  <div class="modal-item" id="img-price">
+    <%= image_tag item.picture_url, class: "image-modal" %>
+  </div>
+  <div class="modal-fields">
+    <h3><%= round_price(@item.item_price) %> CHF</h3>
+    <%= form_for @order_list do |f| %>
+      <div class="modal-edit">
+        <p class="modal-button" id="minus-button">-</p>
+        <%= f.number_field :item_quantity, class: 'number-field', id: 'item-quantity', in: 1..200, value: @order_list.item_quantity %>
+        <p class="modal-button" id="plus-button">+</p>
+      </div>
+      <div>
+        <%= f.hidden_field :item_id, value: @item.id %>
+      </div>
+      <%= f.submit 'Save', class: 'btn btn-dark-blue ml-0 mb-2' %>
+    <% end %>
+  </div>
 </div>
