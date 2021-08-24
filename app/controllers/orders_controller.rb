@@ -16,8 +16,8 @@ class OrdersController < ApplicationController
 
   def thanks_message
     @order = Order.find(params[:id])
-    # @order.is_paid = true
-    # @order.save!
+    @order.is_paid = true
+    @order.save!
   end
 
   def account

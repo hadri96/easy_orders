@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :orders
 
   def has_on_going_order?
-    if self.orders.last.is_confirmed == true && self.orders.last.is_delivered == false
+    if self.orders.last.is_confirmed && !self.orders.last.is_delivered && self.orders.last.is_paid
       return true
     end 
   end
