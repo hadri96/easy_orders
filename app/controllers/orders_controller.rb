@@ -21,8 +21,9 @@ class OrdersController < ApplicationController
   end
 
   def account
-    # @order = Order.find(params[:id])
-    # @orders = current_user.orders
+    @order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false)
+    @orders = current_user.orders
+    @user = current_user
   end
 
   def my_orders_notification

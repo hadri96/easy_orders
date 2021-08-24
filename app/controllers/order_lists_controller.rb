@@ -9,9 +9,15 @@ class OrderListsController < ApplicationController
       end
       @order_list = OrderList.find_by(order_id: @order.id, item_id: params['order_list']['item_id'].to_i)
       if @order_list.nil?
-        @order_list = OrderList.create!(order_id: @order.id, item_id: params['order_list']['item_id'].to_i, item_quantity: params['order_list']['item_quantity'].to_i)
+        if params['order_list']['item_quantity'].to_i > 0
+          @order_list = OrderList.create!(order_id: @order.id, item_id: params['order_list']['item_id'].to_i, item_quantity: params['order_list']['item_quantity'].to_i)
+        end
       else
-        @order_list.update_attribute('item_quantity', params['order_list']['item_quantity'].to_i)
+        if params['order_list']['item_quantity'].to_i > 0
+          @order_list.update_attribute('item_quantity', params['order_list']['item_quantity'].to_i)
+        else
+          @order_list.destroy
+        end
       end
       redirect_to items_path
   end
