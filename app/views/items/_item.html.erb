@@ -2,10 +2,14 @@
   <div class="modal-item" id="img-price">
     <%= image_tag item.picture_url, class: "image-modal" %>
   </div>
-  <div class="modal-fields">
+      <button type="button" class="close-modal-item" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  <div class="modal-fields-item">
     <h3><%= round_price(@item.item_price) %> CHF</h3>
+    <h4><%= @item.name %></h4>
     <%= form_for @order_list do |f| %>
-      <div class="modal-edit">
+      <div class="modal-edit-item">
         <p class="modal-button" id="minus-button">-</p>
         <%= f.number_field :item_quantity, class: 'number-field', id: 'item-quantity', in: 1..200, value: @order_list.item_quantity %>
         <p class="modal-button" id="plus-button">+</p>
