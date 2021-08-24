@@ -18,7 +18,7 @@
       <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
     </div>
     <%= link_to "Home", root_path, class: "dropdown-item" %>
-    <% if current_user.has_on_going_order? %>
+    <% if current_user.has_on_going_order? || !@order.nil? %>
       <%= link_to "My order", my_orders_path(@order), class: "dropdown-item" %>
     <% end %>
     <%= link_to "Account", account_path, class: "dropdown-item" %>
