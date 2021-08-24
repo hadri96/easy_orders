@@ -1,4 +1,5 @@
 class OrderListsController < ApplicationController
+  before_action :set_order_list, only: [ :destroy]
 
   def create
       @order = Order.find_or_create_by(is_confirmed: false, user_id: current_user.id) do |order|
@@ -13,5 +14,20 @@ class OrderListsController < ApplicationController
         @order_list.update_attribute('item_quantity', params['order_list']['item_quantity'].to_i)
       end
       redirect_to items_path
-    end
+  end
+
+  def destroy
+    @order_list.destroy
+    redirect_to items_path
+  end
+
+  private
+
+  def order_list_params
+    params.require(:order_list).permit(:item_id, :order_id, :item_quantity)
+  end
+
+  def set_order_list
+    @order_list = OrderList.find(params[:id])
+  end
 end
