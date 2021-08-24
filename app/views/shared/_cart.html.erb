@@ -23,11 +23,12 @@
               <h4>Total</h4>
               <p><%= round_price(@order.calculate_price) %> CHF</p>
             </div>
-            <div class="modal-footer-cart">
-              <button type="button" id="btn-dark-blue-cart" data-dismiss="modal">Close</button>
+            <div class="end-page-with-btn">
+              <%= link_to 'Checkout', order_path(@order.id), class: "btn-dark-blue-index" %>
+              <%# <button type="button" id="btn-dark-blue-cart" data-dismiss="modal"></button> %>
             </div>
+          </div>
         <% end %>
-        </div>
       </div>
     </div>
   </div>
