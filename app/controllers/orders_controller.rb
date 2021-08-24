@@ -34,9 +34,9 @@ class OrdersController < ApplicationController
   def my_orders
     @order = Order.find(params[:id])
   end
-  
+
   def my_archives
-    @orders = Order.all
+    @orders = Order.all.where(user_id: current_user.id)
   end
 
 

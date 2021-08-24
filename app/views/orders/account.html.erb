@@ -1,8 +1,10 @@
 <div class="cards">
-  <%= link_to my_orders_path(@current_order) do %>
-    <div class="card card1">
-      My orders
-    </div>
+  <% unless @current_order.nil? %>
+    <%= link_to my_orders_path(@current_order) do %>
+      <div class="card card1">
+        My orders
+      </div>
+    <% end %>
   <% end %>
   <%= link_to edit_user_registration_path(@user) do %>
     <div class="card card2">
