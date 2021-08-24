@@ -1,11 +1,13 @@
 <div class="fixed-top">
  <nav class="navbar my_navbar">
     <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+      <span class="navbar-toggler-icon" style="color: #0B3954;"><i class="fa fa-bars"></i></span>
     </button>
-  <h1 id="nav-home">HOME</h1>
+    <div id="nav-home">
+      <%= image_tag "easyorder-logo.png", id: "nav-image" %>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#cartModal">
-      <i class="fa fa-shopping-cart"></i>
+      <i class="fa fa-shopping-cart" style="color: #0B3954;"></i>
     </button>
   </nav>
   <div class="navbar-collapse collapse" id="navbarCollapse">
