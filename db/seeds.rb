@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+require 'openfoodfacts'
 
 OrderList.destroy_all
 Order.destroy_all
@@ -13,7 +14,6 @@ Item.destroy_all
 IngredientList.destroy_all
 Ingredient.destroy_all
 User.destroy_all
-
 
 colin = User.new({
   username: 'colinmalin',
@@ -84,3 +84,4 @@ end
   })
   item.save!
 end
+

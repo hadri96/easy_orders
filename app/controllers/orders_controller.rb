@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
 
   def payment_confirmation
     @order = Order.find(params[:id])
-
   end
 
   def thanks_message
@@ -32,7 +31,7 @@ class OrdersController < ApplicationController
   end
 
   def my_orders
-    @orders = Order.all
+    @order = Order.find(params[:id])
   end
   
   def my_archives
