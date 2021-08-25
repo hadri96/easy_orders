@@ -1,18 +1,23 @@
 <h2 id="myorderh2">My Order</h2>
 
 <div class="contain">  
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered avat", alt: "avatar-bordered" %>
-  <div class="text">
-    <h2>Chloé</h2>
+  <% if current_user.avatar.attached? %>
+    <%= cl_image_tag(current_user.avatar.key, aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat") %>
+  <% else %>
+    <%= image_tag "default-avatar.jpg", class: "avatar-bordered avat"  %>
+  <% end %>
+  <%#= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered avat", alt: "avatar-bordered" %>
+  <div class="text-notif">
+    <h2><%= ["Chloé", "Henry", "Joe", "Mike"].sample %></h2>
     <h2>prepares your order</h2>
-    <span>----------------------</span>
+    <hr>
     <h2>Please come to</h2>
     <h2>pick it up!</h2>
-    <span>----------------------</span>
+    <hr>
     <h2>Password:</h2>
-    <h2>cactus</h2>
-    <span>----------------------</span>
-    <h2>Order id: 2743</h2>
+    <h2><%= ["Rotterdam", "Grange", "Cactus", "Forêt"].sample %></h2>
+    <hr>
+    <h2><%= @order.id  %></h2>
   </div>
 </div>
 
