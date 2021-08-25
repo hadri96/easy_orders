@@ -1,13 +1,13 @@
   #nav-home {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 0 20px;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
   height: 51px;
-  padding: 18px;
   background-color: #0B3954;
+  padding: 4px 14px 0px 14px;
+}
+
+#nav-image {
+  width: 150px;
 }
 
 .fixed-top {
@@ -22,7 +22,6 @@
   padding-left: 15px;
   background-color: rgba(255,102,99,0.8);
   width: 260px;
-  height: 350px;
   font-size: 36px;
   color: #30475E;
   border-top-right-radius: 15px;
