@@ -13,10 +13,11 @@
   <div class="ctn-show-infos-pay-conf">
     <h5>Thank you <%= current_user.first_name %> for your order:</h5>
     <div class="ctn-show-list-pay-conf">
-      <% @order.items.each do |item| %>
+      <% @order.order_lists.each do |order_list| %>
         <div class="ctn-show-items-pay-conf">
-        <p class="show-item-name-pay-conf"><%= item.name %></p>
-          <p><%= round_price(item.item_price) %> CHF</p>
+          <p class="show-item-name-cart" style="padding-right: 10px;"><%= order_list.item_quantity %>X </p>
+          <p class="show-item-name-pay-conf"><%= order_list.item.name %></p>
+          <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %>.-</p>
         </div>
       <% end %>
       <div class="total-pay-conf">
