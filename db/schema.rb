@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2021_08_20_122753) do
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "item_quantity"
+    t.integer "item_quantity", default: 0
     t.index ["item_id"], name: "index_order_lists_on_item_id"
     t.index ["order_id"], name: "index_order_lists_on_order_id"
   end
