@@ -12,9 +12,9 @@
     <h5><%= @item.name %></h5>
     <%= form_for @order_list do |f| %>
       <div class="modal-edit-item">
-        <p class="modal-button" id="minus-button">-</p>
+        <p class="modal-button-item" id="minus-button">-</p>
         <%= f.number_field :item_quantity, class: 'number-field', id: 'item-quantity', in: 1..200, value: @order_list.item_quantity %>
-        <p class="modal-button" id="plus-button">+</p>
+        <p class="modal-button-item" id="plus-button">+</p>
       </div>
       <div>
         <%= f.hidden_field :item_id, value: @item.id %>

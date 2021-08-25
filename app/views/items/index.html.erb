@@ -12,7 +12,6 @@
                 <% end %>
                 <p><%= item.name%></p>
                 <p><%= round_price(item.item_price)%> CHF</p>
-
               <% end %>
             </div>
           <% end %>
@@ -27,5 +26,3 @@
     </div>
   <% end %>
 <% end %>
-
-<%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, crop: :fill %>
