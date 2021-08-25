@@ -7,7 +7,9 @@
           <% @items.where(category: category).each do |item| %>
             <div class="item-inner">
               <%= link_to item_path(item), remote: true do %>
-                <%= image_tag item.picture_url, :class => "item-image" %>
+                <% if item.photo.attached? %>
+                  <%= cl_image_tag item.photo.key, height: 150, width: 150, crop: :fill %>
+                <% end %>
                 <p><%= item.name%></p>
                 <p><%= round_price(item.item_price)%> CHF</p>
               <% end %>
@@ -24,3 +26,5 @@
     </div>
   <% end %>
 <% end %>
+
+<%# style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, crop: :fill %>

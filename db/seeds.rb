@@ -55,14 +55,17 @@ hadrien.save
   item.save!
 end
 
-['Coca-cola', 'Sprite', 'Henniez verte', 'Henniez bleue', 'Urban Kombucha'].each do |drink|
+[['Coca-cola', "Paolaner-beer.png"], ['Sprite', "Orangina.png"], ['Henniez verte', "Paolaner-beer.png"], ['Henniez bleue', "Paolaner-beer.png"], ['Urban Kombucha', "Orangina.png"]].each do |mini_array|
   item = Item.new({
-    name: drink,
+    name: mini_array[0],
     item_price: (5..7).to_a.sample,
     category: 'soft',
     picture_url: 'https://i2.wp.com/www.circularonline.co.uk/wp-content/uploads/2019/11/cocacola.png'
   })
+  file = File.open("app/assets/images/#{mini_array[1]}")
+  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/png')
   item.save!
+
 end
 
 ['Pinot Noir - Orlaya', 'Petite Arvine - Christophe Abbet', 'Nez Noir - Provins', 'Altesse - les Parcelles', 'Chasselas - Domaine Bovet'].each do |wine|
