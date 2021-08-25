@@ -19,7 +19,7 @@
       <% else %>
         <%= image_tag "default-avatar.jpg", class: "avatar-bordered"  %>
       <% end %>
-      <%= link_to current_user.first_name, account_path, class: "dropdown-frist-name" %>
+      <%= link_to current_user.first_name, edit_user_registration_path(@user), class: "dropdown-frist-name" %>
     </div>
     <%= link_to "Home", root_path, class: "dropdown-item" %>
     <% unless @current_order.nil? %>
