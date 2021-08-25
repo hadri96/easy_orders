@@ -1,3 +1,11 @@
+<head>
+<script type="text/javascript">
+  window.setTimeout(function() {
+      window.location.href = "/orders/<%= @order.id %>/payment_confirmation";
+  }, 5000);
+</script>
+</head>
+
 <div class="banneruser">
 </div>
 
@@ -8,5 +16,4 @@
     <h2>has been accepted</h2>
     <h2>Cheers!</h2>
   </div>
-  <%= link_to "Next", payment_confirmation_path, class: "btn-dark-blue-thanks" %>
 </div>

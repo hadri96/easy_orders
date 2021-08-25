@@ -1,3 +1,11 @@
+<head>
+<script type="text/javascript">
+  window.setTimeout(function() {
+      window.location.href = "/orders/<%= @order.id %>/payment_confirmation";
+  }, 5000);
+</script>
+</head>
+
 <div class="banneruser-pay-conf">
 </div>
 
@@ -22,7 +30,7 @@
       <% end %>
       <div class="total-pay-conf">
         <h4>Total</h4>
-        <p><%= round_price(@order.items.sum(&:item_price)) %> CHF</p>
+        <p><%= round_price(@order.total_price) %> CHF</p>
       </div>
     </div>
     <div class="btn-show-end-page-pay-conf">
