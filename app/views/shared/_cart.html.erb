@@ -6,7 +6,7 @@
           <h4 style="text-align: center;">Your cart is empty</h4>
           <p>Please make sure to select an item before consulting your cart</p>
         <% else %>
-          <h4 style="text-align: center;">My cart</h4>
+          <h3 style="text-align: center;">My cart</h3>
           <div class="ctn-show-infos-cart">
             <% @order.order_lists.each do |order_list| %>
               <div class="ctn-show-items-cart">
@@ -21,7 +21,7 @@
             <% end %>
             <div class="total-cart">
               <h4>Total</h4>
-              <p><%= round_price(@order.calculate_price) %> CHF</p>
+              <h4><%= round_price(@order.calculate_price) %> CHF</h4>
             </div>
             <div class="end-page-with-btn">
               <%= link_to 'Checkout', order_path(@order.id), class: "btn-dark-blue-index" %>

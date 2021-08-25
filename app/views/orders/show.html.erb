@@ -12,7 +12,7 @@
       <% @order.order_lists.each do |order_list| %>
         <div class="ctn-show-items-cart">
           <%= link_to(item_path(order_list.item), {remote: true, datatoggle: "modal", datatarget: '#itemEditModal'}) do %>
-            <i class="fas fa-hand-point-right" style="font-size: 28px; color: #FF6663"></i>
+            <i class="fas fa-edit" style="font-size: 20px; color: #FF6663"></i>
           <% end %>
           <p class="show-item-name-cart"><%= order_list.item_quantity %> X </p>
           <p class="show-item-name-cart" style="width: 60%; font-weight: bold;"><%= order_list.item.name %>
@@ -22,7 +22,7 @@
       <% end %>
       <div class="total">
         <h4>Total</h4>
-        <p><%= round_price(@order.calculate_price) %> CHF</p>
+        <h4><%= round_price(@order.calculate_price) %> CHF</h4>
       </div>
     </div>
     <div class="btn-show-end-page">
