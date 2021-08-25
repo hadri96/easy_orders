@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+
+  before_action :find_ID, except: [:account, :my_archives]
+
   def show
     @order = Order.find(params[:id])
     # @orders = @user.orders.select { |order| order.is_confirmed == false }
@@ -49,4 +52,11 @@ class OrdersController < ApplicationController
     @order.destroy
     redirect_to root_path
   end
+
+  private
+
+  def find_ID
+    @order = Order.find(params[:id])
+  end
+  
 end
