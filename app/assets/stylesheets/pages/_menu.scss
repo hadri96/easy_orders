@@ -1,13 +1,13 @@
 .ctn-menu {
   color: #0B3954;
   margin: 0 auto;
-  padding: 17% 0% 0% 5%;
+  padding: 0% 0% 0% 5%;
+  margin-top: 25%;
 }
 
-.ctn-menu h4 {
-  padding-bottom: 7%;
-  padding-top: 5%;
-  font-weight: bold;
+.ctn-menu h3 {
+  padding-bottom: 4%;
+  padding-top: 3%;
 }
 
 .items-list {
@@ -32,26 +32,29 @@
 }
 
 .item-inner {
-  display: flex;
   background-color: #0B3954;
   margin-right: 16px;
   border-radius: 8px;
-  padding-bottom: 2%;
   box-shadow: 3px 4px 4px lightgrey;
 }
 
 .item-image {
-  width: 170px;
   border-radius: 8px 8px 0px 0px;
-  height: 27vh;
-  object-fit: cover;
 }
 
 .item-wrapper p {
   color: #F9F9F9;
-  padding-left: 2%;
-  font-size: 18px;
+  padding-left: 4%;
+}
+
+#wrapper-name {
   font-weight: bold;
+}
+
+#wrapper-price {
+  display: flex;
+  justify-items: flex-end;
+
 }
 
 .end-page-with-btn {
