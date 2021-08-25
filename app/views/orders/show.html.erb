@@ -8,18 +8,16 @@
   </div>
   <div class="ctn-show-infos">
     <h4>Please confirm your order:</h4>
-    <div class="ctn-show-list">
+    <div class="ctn-show-infos-cart">
       <% @order.order_lists.each do |order_list| %>
-        <div class="ctn-show-items">
-        <%= link_to 'Edit', item_path(order_list.item),  {remote: true, datatoggle: "modal", datatarget: '#itemEditModal'} %>
-        <div id="itemEditModal" class="modal hide fade" role="dialog" aria-labelledby="itemEditModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content"></div>
-          </div>
-        </div>
-        <p class="show-item-name"><%= order_list.item_quantity %> X </p>
-        <p class="show-item-name"><%= order_list.item.name %> @ <%= round_price(order_list.item.item_price) %> CHF</p>
-        <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %> CHF</p>
+        <div class="ctn-show-items-cart">
+          <%= link_to(item_path(order_list.item), {remote: true, datatoggle: "modal", datatarget: '#itemEditModal'}) do %>
+            <i class="fas fa-hand-point-right" style="font-size: 28px; color: #FF6663"></i>
+          <% end %>
+          <p class="show-item-name-cart"><%= order_list.item_quantity %> X </p>
+          <p class="show-item-name-cart" style="width: 60%; font-weight: bold;"><%= order_list.item.name %>
+          <p>@<%= round_price(order_list.item.item_price) %>.-</p>
+          <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %>.-</p>
         </div>
       <% end %>
       <div class="total">
@@ -29,8 +27,8 @@
     </div>
     <div class="btn-show-end-page">
       <%= link_to "Pay now", payment_method_path(params[:id]), class: "btn-dark-blue-show" %>
-      <%= link_to "Back", :back , class: "btn-dark-blue-show" %>
-      <%= link_to "Cancel order", '#', class: "btn-dark-blue-show" %>
+      <%= link_to "Back", :back, class: "btn-dark-blue-show" %>
+      <%= link_to "Cancel order", :back, class: "btn-dark-blue-show", method: :destroy %>
     </div>
   </div>
 </div>
