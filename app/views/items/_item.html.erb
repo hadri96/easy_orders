@@ -1,7 +1,7 @@
 <div class="container-modal">
   <div class="modal-item" id="img-price">
     <% if item.photo.attached? %>
-      <%= cl_image_tag item.photo.key, height: 150, width: 150, crop: :fill, class: "image-modal" %>
+      <%= cl_image_tag item.photo.key, height: 'auto', width: 150, class: "image-modal" %>
     <% end %>
   </div>
       <button type="button" class="close-modal-item" data-dismiss="modal" aria-label="Close">

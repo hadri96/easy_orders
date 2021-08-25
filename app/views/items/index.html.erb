@@ -8,7 +8,7 @@
             <div class="item-inner">
               <%= link_to item_path(item), remote: true do %>
                 <% if item.photo.attached? %>
-                  <%= cl_image_tag item.photo.key, height: 150, width: 150, crop: :fill %>
+                  <%= cl_image_tag item.photo.key, height: 'auto', width: 150 %>
                 <% end %>
                 <p><%= item.name%></p>
                 <p><%= round_price(item.item_price)%> CHF</p>
