@@ -28,7 +28,7 @@
     <div class="btn-show-end-page">
       <%= link_to "Pay now", payment_method_path(params[:id]), class: "btn-dark-blue-show" %>
       <%= link_to "Back", :back, class: "btn-dark-blue-show" %>
-      <%= link_to "Cancel order", :back, class: "btn-dark-blue-show", method: :destroy %>
+      <%= link_to "Cancel order", order_path(@order), data: { confirm: "Are you sure?" }, method: :delete, class: "btn-dark-blue-show" %>
     </div>
   </div>
 </div>
