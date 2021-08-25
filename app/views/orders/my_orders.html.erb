@@ -2,14 +2,14 @@
 <script type="text/javascript">
   window.setTimeout(function() {
       window.location.href = "http://localhost:3000/orders/<%= @order.id %>/my_orders_notification";
-  }, 5000); 
+  }, 5000);
 </script>
 </head>
-  
+
 
 <h2 id="myorderh2">My Order</h2>
 
-<div class="contain">  
+<div class="contain">
   <%= image_tag "my_orders_img.jpg", class: "avatar-bordered avat", alt: "avatar-bordered" %>
   <div class="text">
     <h2><%= @order.id %></h2>
@@ -21,6 +21,3 @@
     <h2>message notification.</h2>
   </div>
 </div>
-
-onLoad="setTimeout('delayedRedirect()', 3000)">
-<h2>You'll be redirected soon!</h2>
