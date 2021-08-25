@@ -21,8 +21,9 @@
   position: fixed;
   padding-left: 15px;
   background-color: rgba(255,102,99,0.8);
-  width: 260px;
-  font-size: 36px;
+  min-width: 60%;
+  max-width: fit-content;
+  font-size: 30px;
   color: #30475E;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -92,5 +93,5 @@
   align-items: center;
   padding-left: 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
 }
