@@ -30,7 +30,7 @@
       <% end %>
       <div class="total-pay-conf">
         <h4>Total</h4>
-        <p><%= round_price(@order.total_price) %> CHF</p>
+        <p><%= round_price(@order.calculate_price) %> CHF</p>
       </div>
     </div>
     <div class="btn-show-end-page-pay-conf">
