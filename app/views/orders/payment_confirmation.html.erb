@@ -1,11 +1,3 @@
-<head>
-<script type="text/javascript">
-  window.setTimeout(function() {
-      window.location.href = "/orders/<%= @order.id %>/payment_confirmation";
-  }, 5000);
-</script>
-</head>
-
 <div class="banneruser-pay-conf">
 </div>
 
@@ -19,7 +11,8 @@
 
 <div class="ctn-show-pay-conf">
   <div class="ctn-show-infos-pay-conf">
-    <h5>Thank you <%= current_user.first_name %> for your order:</h5>
+    <h4>Hey <%= current_user.first_name %>!</h4>
+    <h4>Thank you for your purchase</h4>
     <div class="ctn-show-list-pay-conf">
       <% @order.order_lists.each do |order_list| %>
         <div class="ctn-show-items-pay-conf">
@@ -30,11 +23,11 @@
       <% end %>
       <div class="total-pay-conf">
         <h4>Total</h4>
-        <p><%= round_price(@order.calculate_price) %> CHF</p>
+        <h4><%= round_price(@order.calculate_price) %> CHF</h4>
       </div>
     </div>
     <div class="btn-show-end-page-pay-conf">
-      <%= link_to "Next", account_path, class: "btn-dark-blue-show-pay-conf" %>
+      <%= link_to "Follow my order", my_orders_path, class: "btn-dark-blue-show-pay-conf" %>
     </div>
   </div>
 </div>
