@@ -45,46 +45,50 @@ hadrien = User.new({
 
 hadrien.save
 
-5.times do
+[['Bud Light', "bud-light.jpg"], ['Stella Artois', "stella-artois.jpg"], ['Becks', "becks.jpg"], ['Kirin', "kirin.jpg"], ['Tsingtao', "tsingtao.jpg"]].each do |mini_array|
   item = Item.new({
-    name: Faker::Beer.unique.brand,
+    name: mini_array[0],
     item_price: (5..7).to_a.sample,
     category: 'beer',
-    picture_url: 'https://marketingweek.imgix.net/content/uploads/2019/04/12174523/Carlsberg-pilsner.png'
   })
+  file = File.open("app/assets/images/#{mini_array[1]}")
+  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/jpeg')
   item.save!
+
 end
 
-[['Coca-cola', "Paolaner-beer.png"], ['Sprite', "Orangina.png"], ['Henniez verte', "Paolaner-beer.png"], ['Henniez bleue', "Paolaner-beer.png"], ['Urban Kombucha', "Orangina.png"]].each do |mini_array|
+[['Coca-cola', "coca-cola.jpg"], ['Sprite', "sprite.jpg"], ['Henniez verte', "henniez-verte.jpg"], ['Henniez bleue', "henniez-bleu.jpg"], ['Urban Kombucha', "urban-kambucha.jpg"]].each do |mini_array|
   item = Item.new({
     name: mini_array[0],
     item_price: (5..7).to_a.sample,
     category: 'soft',
-    picture_url: 'https://i2.wp.com/www.circularonline.co.uk/wp-content/uploads/2019/11/cocacola.png'
   })
   file = File.open("app/assets/images/#{mini_array[1]}")
-  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/png')
+  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/jpeg')
   item.save!
 
 end
 
-['Pinot Noir - Orlaya', 'Petite Arvine - Christophe Abbet', 'Nez Noir - Provins', 'Altesse - les Parcelles', 'Chasselas - Domaine Bovet'].each do |wine|
+[['Pinot Noir - Orlaya', "pinot-noir-orlaya.jpg"], ['Petite Arvine - Christophe Abbet', "petite-arvine-christophe-abbet.jpg"], ['Nez Noir - Provins', "nez-noir-provin.jpg"], ['Altesse - les Parcelles', "altesse-les-parcelles.jpg"], ['Chasselas - Domaine Bovet', "chasselas-domaine-bovet.jpg"]].each do |mini_array|
   item = Item.new({
-    name: wine,
+    name: mini_array[0],
     item_price: (5..7).to_a.sample,
     category: 'wine',
-    picture_url: 'https://www.wineroo.ch/wp-content/uploads/2020/05/Pinot-Noir-Cave-De-L%E2%80%99Orlaya-Mathilde-Roux-Fully-2017-75-cl_Fully_6939_1.jpeg'
   })
+  file = File.open("app/assets/images/#{mini_array[1]}")
+  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/jpeg')
   item.save!
+
 end
 
-5.times do
+[['French Toast', "french-toast.jpg"], ['Bruschette with tomato', "bruschette-with-tomato.jpg"], ['Pappardelle alla bolognese', "papardelle-alla-bolognese.jpg"], ['Peking Duck', "peking-duck.jpg"], ['Stinky Tofu', "stinky-tofu.jpg"]].each do |mini_array|
   item = Item.new({
-    name: Faker::Food.unique.dish,
-    item_price: (15..25).to_a.sample,
+    name: mini_array[0],
+    item_price: (5..7).to_a.sample,
     category: 'food',
-    picture_url: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https://static.onecms.io/wp-content/uploads/sites/9/2017/06/stacked-gochujang-burger-fwx.jpg'
   })
+  file = File.open("app/assets/images/#{mini_array[1]}")
+  item.photo.attach(io: file, filename: mini_array[1], content_type: 'image/jpeg')
   item.save!
-end
 
+end
