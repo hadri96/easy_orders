@@ -43,4 +43,10 @@ class OrdersController < ApplicationController
   def profile
     @order = Order.find(params[:id])
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to root_path
+  end
 end
