@@ -1,6 +1,10 @@
 
 <% if current_user.is_barman %>
-  document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order_barman", order: @order)) %>';
+  <% if @order.in_preparation %>
+      document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order_barman_deliver", order: @order)) %>';
+  <% else %>
+      document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order_barman_prepare", order: @order)) %>';
+  <% end %>
 <% else %>
   document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order", order: @order)) %>';
 <% end %>
