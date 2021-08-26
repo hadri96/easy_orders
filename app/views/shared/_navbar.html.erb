@@ -1,5 +1,5 @@
 <div class="fixed-top">
- <nav class="navbar my_navbar">
+ <nav class="navbar my_navbar" <%= 'style=padding-right:15%;' if current_user.is_barman %>>
     <button class="navbar-toggler menu" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="box-shadow: 1px 3px 4px rgb(0 0 0 / 25%);">
       <span class="navbar-toggler-icon" style="color: #0B3954;"><i class="fa fa-bars"></i></span>
     </button>
@@ -28,13 +28,8 @@
       <% unless @current_order.nil? %>
         <%= link_to "My order", my_orders_path(@current_order), class: "dropdown-item" %>
       <% end %>
-
       <%= link_to "Archives", my_archives_path, class: "dropdown-item" %>
     <% end %>
     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-    <%# <div class="logos">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-    </div> %>
   </div>
 </div>
