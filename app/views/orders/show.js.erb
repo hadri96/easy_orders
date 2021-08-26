@@ -1,5 +1,9 @@
 
-document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order", order: @order)) %>';
+<% if current_user.is_barman %>
+  document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order_barman", order: @order)) %>';
+<% else %>
+  document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order", order: @order)) %>';
+<% end %>
 
 $('#orderModal').modal('show');
 

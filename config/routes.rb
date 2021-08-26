@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/orders/:id/my_orders_notification', to: 'orders#my_orders_notification', as: "my_orders_notification"
   get '/my_orders/:id', to: 'orders#my_orders', as: "my_orders"
   get '/my_archives', to: 'orders#my_archives', as: "my_archives"
+  get '/current_orders', to: 'orders#current_orders', as: 'current_orders'
 end
