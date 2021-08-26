@@ -1,5 +1,5 @@
 class OrderListsController < ApplicationController
-  before_action :set_order_list, only: [ :destroy]
+  before_action :set_order_list, only: [ :destroy, :update]
 
   def create
       @order = Order.find_or_create_by(is_confirmed: false, user_id: current_user.id) do |order|
@@ -19,13 +19,22 @@ class OrderListsController < ApplicationController
               @order_list.destroy
           end
       end
-
       if !@order.order_lists.empty?
           redirect_back fallback_location: items_path
       else
         redirect_to items_path
       end
 
+  end
+
+  def update
+    @order_list.update(order_list_params)
+    @order = Order.find(@order_list.order_id)
+    if !@order.order_lists.empty?
+        redirect_back fallback_location: items_path
+    else
+      redirect_to items_path
+    end
   end
 
   def destroy

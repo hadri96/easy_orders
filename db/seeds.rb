@@ -72,7 +72,7 @@ end
 [['Pinot Noir - Orlaya', "pinot-noir-orlaya.jpg"], ['Petite Arvine - Christophe Abbet', "petite-arvine-christophe-abbet.jpg"], ['Nez Noir - Provins', "nez-noir-provin.jpg"], ['Altesse - les Parcelles', "altesse-les-parcelles.jpg"], ['Chasselas - Domaine Bovet', "chasselas-domaine-bovet.jpg"]].each do |mini_array|
   item = Item.new({
     name: mini_array[0],
-    item_price: (15..50).to_a.sample,
+    item_price: (6..9).to_a.sample,
     category: 'wine',
   })
   file = File.open("app/assets/images/#{mini_array[1]}")
@@ -84,7 +84,7 @@ end
 [['French Toast', "french-toast.jpg"], ['Bruschette with tomato', "bruschette-with-tomato.jpg"], ['Pappardelle alla bolognese', "papardelle-alla-bolognese.jpg"], ['Peking Duck', "peking-duck.jpg"], ['Stinky Tofu', "stinky-tofu.jpg"]].each do |mini_array|
   item = Item.new({
     name: mini_array[0],
-    item_price: (11..27).to_a.sample,
+    item_price: (15..25).to_a.sample,
     category: 'food',
   })
   file = File.open("app/assets/images/#{mini_array[1]}")
