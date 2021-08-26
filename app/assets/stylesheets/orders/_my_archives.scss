@@ -11,11 +11,16 @@
   text-align: center;
   justify-content: center;
   width: 289px;
-  height: 41px;
+  max-height: 80px;
   background-color: #F05454;
   border-radius: 5px;
   color: #30475E;
+  padding: 10px 0;
   margin: 15px auto 15px auto
+}
+
+.archive p {
+  margin-bottom: 0;
 }
 
 .black-back {

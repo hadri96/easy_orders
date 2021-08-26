@@ -1,0 +1,17 @@
+<div class="ctn-show-infos">
+  <h4>Please confirm your order:</h4>
+  <div class="ctn-show-infos-cart">
+    <% @order.order_lists.each do |order_list| %>
+      <div class="ctn-show-items-cart">
+        <p class="show-item-name-cart"><%= order_list.item_quantity %> X </p>
+        <p class="show-item-name-cart" style="width: 60%; font-weight: bold;"><%= order_list.item.name %>
+        <p>@<%= round_price(order_list.item.item_price) %>.-</p>
+        <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %>.-</p>
+      </div>
+    <% end %>
+    <div class="total">
+      <h4>Total</h4>
+      <p><%= round_price(@order.calculate_price) %> CHF</p>
+    </div>
+  </div>
+</div>
