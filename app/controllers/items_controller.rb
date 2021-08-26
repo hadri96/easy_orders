@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-
+  before_action :current_order
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   # skip_before_action :authenticate_user!, only:[:index, :show]
 
@@ -73,6 +73,10 @@ class ItemsController < ApplicationController
 
   def ingredient_params
     params.require(:ingredient).permit(:photo)
+  end
+
+  def current_order
+    @current_order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false, in_preparation: false)
   end
 
 end
