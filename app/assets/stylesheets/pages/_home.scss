@@ -1,18 +1,44 @@
 .img1 {
-  height: 226px;
-  width: 226px;
+  width: 250px;
 }
 
 .img2 {
-  height: 226px;
-  width: 226px;
+  width: 220px;
+
 }
+
+// .images {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   height: 100vh;
+//   text-align: center;
+//   margin-top: 8%;
+// }
 
 .images {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 100vh;
-  text-align: center;
-  margin-top: 8%;
+}
+
+.banner-lewagon {
+  text-align-last: center;
+  width: 100%;
+  height: 44vh;
+  background-color: #46B4BF;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.banner-lewagon h3 {
+  color: #0B3954;
+}
+
+#top {
+  margin-top: 25%;
+}
+
+.image2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
 }
