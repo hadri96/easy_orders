@@ -2,7 +2,7 @@
   <h3 style="font-weight: bold;">What we have to offer:</h3>
     <% @categories.each do |category| %>
       <div class="items-list">
-        <h3><%= category.capitalize %></h3>
+        <h3><%= category.capitalize %> (5)</h3>
         <div class="item-wrapper">
           <% @items.where(category: category).each do |item| %>
             <div class="item-inner">
