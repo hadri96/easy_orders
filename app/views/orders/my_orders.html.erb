@@ -1,7 +1,7 @@
 <head>
 <script type="text/javascript">
   window.setTimeout(function() {
-      window.location.href = "/orders/<%= @order.id %>/my_orders_notification";
+      window.location.href = "/my_orders/<%= @order.id %>";
   }, 5000);
 </script>
 </head>
@@ -11,7 +11,7 @@
 <div class="contain">
   <%= image_tag "my_orders_img.jpg", class: "avatar-bordered avat", alt: "avatar-bordered" %>
   <div class="text">
-    <h4>Your order will be ready in approximately 1 minute.</h4>
+    <h4>Your order will be ready in approximately <%= (2..5).to_a.sample %> minutes.</h4>
     <hr>
     <h4>Thank you</h4>
     <h4>for your patience.</h4>

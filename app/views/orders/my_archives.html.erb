@@ -3,9 +3,9 @@
   <div class="archives">
     <% @orders.select{ |order| order.is_confirmed }.each do |order| %>
       <div class="archive">
-        <%= order.created_at %> | <%= order.calculate_price %>.-
+        <%= order.created_at %> | <%= round_price(order.calculate_price) %> CHF
         <%= link_to order_path(order), remote: true do %>
-        <p>details</p>
+        <i class="fas fa-hand-point-up"></i>
         <% end %>
       </div>
     <% end %>

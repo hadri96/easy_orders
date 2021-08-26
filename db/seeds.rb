@@ -27,7 +27,7 @@ colin.save
 
 alex = User.new({
   username: 'alexflex',
-  first_name: 'Alexandre',
+  first_name: 'Alex',
   last_name: 'Stutz',
   email: 'alex04@gmail.com',
   password: 'Picasso96*'

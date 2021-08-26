@@ -7,20 +7,23 @@
 
 .archive {
   display: flex;
-  flex-direction: column;
   text-align: center;
   justify-content: center;
-  width: 289px;
+  max-width: 300px;
   max-height: 80px;
   background-color: #F05454;
   border-radius: 5px;
   color: #30475E;
   padding: 10px 0;
-  margin: 15px auto 15px auto
+  margin: 15px auto;
 }
 
 .archive p {
   margin-bottom: 0;
+}
+
+.archive i {
+  margin: 0 6px;
 }
 
 .black-back {
@@ -28,4 +31,38 @@
   min-height: 90vh;
   border-radius: 20px 20px 0px 0px;
   margin-top: 25%;
+}
+
+.pending {
+  background-color: $dark-blue;
+  border-radius: 20px;
+  margin: 20% 0 15% 0;
+  padding: 30px 25px;
+}
+
+.pending-title {
+  color: $yellow;
+  width:fit-content;
+  padding-bottom: 15px;
+}
+
+.pending-order {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  max-width: 300px;
+  max-height: 80px;
+  background-color: $yellow;
+  border-radius: 5px;
+  color: $dark-blue;
+  padding: 10px 0;
+  margin: 15px auto;
+}
+
+.pending-order i {
+  margin: 0 6px;
+}
+
+.pending-order p {
+  margin-bottom: 0;
 }

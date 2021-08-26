@@ -19,7 +19,6 @@ class ItemsController < ApplicationController
       @order = Order.find_or_create_by(is_confirmed: false, user_id: current_user.id) do |order|
           order.is_confirmed = false
           order.is_delivered = false
-          order.is_paid = false
           order.user_id = current_user.id
       end
       @order_list = OrderList.find_or_initialize_by(item_id: @item.id, order_id: @order.id)
