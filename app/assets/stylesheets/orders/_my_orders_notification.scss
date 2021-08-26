@@ -1,16 +1,15 @@
-.avat {
-  height: 226px;
-  width: 226px;
+.avat-notif {
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   box-shadow: 3px 4px 4px rgba(0,0,0,0.25);
   border: transparent;
   position: absolute;
-  margin-left: 0px;
+  margin: 0px;
 }
 
 .text-notif {
   height: 78vh;
-  padding: 5px 5px;
   background-color: #46B4BF;
   display: flex;
   flex-direction: column;
@@ -19,6 +18,7 @@
   border-radius: 15px;
   justify-content: flex-end;
   color: white;
+  padding: 0px 50px 0px 50px;
 }
 
 .text h2 {

@@ -1,18 +1,17 @@
 <h3 id="myorderh2">My Order</h3>
 
 <div class="contain">
-    <%= image_tag("alex.jpg", aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat") %>
+    <%= image_tag("colin.jpg", aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat-notif") %>
   <div class="text-notif">
     <h4>Alex</h4>
-    <h4>is preparing your order</h4>
+    <p>is preparing your order</p>
     <hr>
-    <h4>Please come to</h4>
-    <h4>pick it up!</h4>
+    <p>Please come to</p>
+    <p>pick it up!</p>
     <hr>
-    <h4>Your password for the order is:</h4>
-    <h4><%= ["Rotterdam", "Grange", "Cactus", "Forêt"].sample %></h4>
+    <h4>Your order password is:</h4>
+    <p>"Cactus"</p>
     <hr>
-    <h4>Your order number is: <%= @order.id  %></h4>
+    <h4>Your order number is:</h4><p><%= 8200 + @order.id %></p>
   </div>
 </div>
-
