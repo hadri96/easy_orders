@@ -1,5 +1,5 @@
 <div class="ctn-show-infos">
-  <h4>Please confirm your order:</h4>
+  <h4>Content of your <%= "past" if @order.is_delivered %> order</h4>
   <div class="ctn-show-infos-cart">
     <% @order.order_lists.each do |order_list| %>
       <div class="ctn-show-items-cart">

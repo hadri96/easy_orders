@@ -1,6 +1,6 @@
 <h3 id="myorderh2">My Order</h3>
 
-<div class="contain">  
+<div class="contain">
   <% if current_user.avatar.attached? %>
     <%= cl_image_tag(current_user.avatar.key, aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat") %>
   <% else %>
@@ -8,7 +8,7 @@
   <% end %>
   <div class="text-notif">
     <h4><%= ["Chloé", "Henry", "Joe", "Mike"].sample %></h4>
-    <h4>prepares your order</h4>
+    <h4>is preparing your order</h4>
     <hr>
     <h4>Please come to</h4>
     <h4>pick it up!</h4>

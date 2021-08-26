@@ -1,25 +1,25 @@
-<div class="black-back">
-  <h2 id="myarchivesh2">Pending orders</h2>
+<div class="pending">
+  <h2 class="pending-title">Pending orders</h2>
   <div class="archives">
     <% @orders.select { |order| !order.in_preparation }.each do |order| %>
-      <div class="archive">
-        <%= order.created_at %> | <%= order.calculate_price %>.-
+      <div class="pending-order">
+        <%= order.created_at %> | <%= round_price(order.calculate_price) %> CHF
         <%= link_to order_path(order), remote: true do %>
-        <p>details</p>
+        <i class="fas fa-hand-point-up"></i>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
 
-<div class="black-back">
-  <h2 id="myarchivesh2">Orders in preparation</h2>
+<div class="pending">
+  <h2 class="pending-title">Orders in preparation</h2>
   <div class="archives">
     <% @orders.select { |order| !order.is_delivered && order.in_preparation }.each do |order| %>
-      <div class="archive">
-        <%= order.created_at %> | <%= order.calculate_price %>.-
+      <div class="pending-order">
+        <%= order.created_at %> | <%= round_price(order.calculate_price) %>CHF
         <%= link_to order_path(order), remote: true do %>
-        <p>details</p>
+        <i class="fas fa-hand-point-up"></i>
         <% end %>
       </div>
     <% end %>

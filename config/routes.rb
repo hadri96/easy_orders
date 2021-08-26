@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/orders/:id/payment_confirmation', to: 'orders#payment_confirmation', as: "payment_confirmation"
   resources :orders, only: [:show, :destroy, :edit, :update]
   get '/orders/:id/payment_method', to: 'orders#payment_method', as: "payment_method"
-  get '/orders/:id/thanks_message', to: 'orders#thanks_message', as: "thanks_message"
+  patch '/orders/:id/thanks_message', to: 'orders#thanks_message', as: "thanks_message"
   get '/account', to: 'orders#account', as: "account"
   get '/orders/:id/my_orders_notification', to: 'orders#my_orders_notification', as: "my_orders_notification"
   get '/my_orders/:id', to: 'orders#my_orders', as: "my_orders"

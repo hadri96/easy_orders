@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 
   before_action :set_order, except: [:account, :my_archives, :current_orders]
   before_action :barman_redirect, except: [:current_orders, :show, :update]
+  before_action :current_order
 
   def show
   end
@@ -16,15 +17,14 @@ class OrdersController < ApplicationController
   end
 
   def payment_confirmation
-  end
-
-  def thanks_message
     @order.is_paid = true
     @order.save!
   end
 
+  def thanks_message
+  end
+
   def account
-    @current_order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false)
     @orders = current_user.orders
     @user = current_user
   end
@@ -33,6 +33,9 @@ class OrdersController < ApplicationController
   end
 
   def my_orders
+    if @order.in_preparation
+      redirect_to my_orders_notification_path(@order)
+    end
   end
 
   def my_archives
@@ -66,5 +69,9 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:is_confirmed, :is_delivered, :user_id, :is_paid, :in_preparation)
+  end
+
+  def current_order
+    @current_order = Order.find_by(user_id: current_user.id, is_paid: true, is_delivered: false, in_preparation: false)
   end
 end
