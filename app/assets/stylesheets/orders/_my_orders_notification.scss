@@ -9,8 +9,8 @@
 }
 
 .text-notif {
-  width: 322px;
   height: 78vh;
+  padding: 5px 5px;
   background-color: #46B4BF;
   display: flex;
   flex-direction: column;
@@ -43,4 +43,10 @@ hr {
   border: 1px solid white;
   width: 60%;
   height: 2px;
+}
+
+.avatar-bordered-avat {
+  width: 70px;
+  radius: 50px;
+
 }

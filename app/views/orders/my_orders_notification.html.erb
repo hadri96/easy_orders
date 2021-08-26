@@ -1,19 +1,15 @@
 <h3 id="myorderh2">My Order</h3>
 
 <div class="contain">
-  <% if current_user.avatar.attached? %>
-    <%= cl_image_tag(current_user.avatar.key, aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat") %>
-  <% else %>
-    <%= image_tag "default-avatar.jpg", class: "avatar-bordered avat"  %>
-  <% end %>
+    <%= image_tag("alex.jpg", aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat") %>
   <div class="text-notif">
-    <h4><%= ["Chloé", "Henry", "Joe", "Mike"].sample %></h4>
+    <h4>Alex</h4>
     <h4>is preparing your order</h4>
     <hr>
     <h4>Please come to</h4>
     <h4>pick it up!</h4>
     <hr>
-    <h4>Password:</h4>
+    <h4>Your password for the order is:</h4>
     <h4><%= ["Rotterdam", "Grange", "Cactus", "Forêt"].sample %></h4>
     <hr>
     <h4>Your order number is: <%= @order.id  %></h4>
