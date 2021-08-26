@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
           order.is_confirmed = false
           order.is_delivered = false
           order.user_id = current_user.id
+          order.password = ["Rotterdam", "Grange", "Cactus", "Forêt"].sample
       end
       @order_list = OrderList.find_or_initialize_by(item_id: @item.id, order_id: @order.id)
   end

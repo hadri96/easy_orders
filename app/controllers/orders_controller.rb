@@ -68,7 +68,7 @@ class OrdersController < ApplicationController
   end
 
   def order_params
-    params.require(:order).permit(:is_confirmed, :is_delivered, :user_id, :is_paid, :in_preparation)
+    params.require(:order).permit(:is_confirmed, :is_delivered, :user_id, :is_paid, :in_preparation, :password)
   end
 
   def current_order
