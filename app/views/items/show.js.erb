@@ -1,5 +1,5 @@
 
-document.getElementById('itemModalBody').innerHTML = '<%= escape_javascript(render("items/item", item:@item)) %>';
+document.getElementById('itemModalBody').innerHTML = '<%= escape_javascript(render("items/item", item:@item, order:@order)) %>';
 
 $('#itemModal').modal('show');
 

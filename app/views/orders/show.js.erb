@@ -1,2 +1,5 @@
-$("#itemEditModal").find(".modal-content").innerHTML("<%= escape_javascript(render '../items/item') %>");
-$("#itemEditModal").modal('show');
+
+document.getElementById('orderModalBody').innerHTML = '<%= escape_javascript(render("orders/order", order: @order)) %>';
+
+$('#orderModal').modal('show');
+

@@ -1,9 +1,12 @@
 <div class="black-back">
   <h2 id="myarchivesh2">My Archives</h2>
   <div class="archives">
-    <% @orders.each do |order| %>
+    <% @orders.select{ |order| order.is_confirmed }.each do |order| %>
       <div class="archive">
         <%= order.created_at %> | <%= order.calculate_price %>.-
+        <%= link_to order_path(order), remote: true do %>
+        <p>details</p>
+        <% end %>
       </div>
     <% end %>
   </div>
