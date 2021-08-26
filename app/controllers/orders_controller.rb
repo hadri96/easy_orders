@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
 
-
-  before_action :barman_redirect, except: [:current_orders, :show]
   before_action :set_order, except: [:account, :my_archives, :current_orders]
+  before_action :barman_redirect, except: [:current_orders, :show, :update]
 
   def show
   end
@@ -51,9 +50,9 @@ class OrdersController < ApplicationController
 
   def update
     @order.update(order_params)
-    redirect_to order_path(@order)
+    redirect_to current_orders_path
   end
-  
+
 
   private
 
@@ -64,9 +63,8 @@ class OrdersController < ApplicationController
   def barman_redirect
     redirect_to current_orders_path if current_user.is_barman
   end
-  
+
   def order_params
-    params.require(:order).permit(:is_confirmed, :is_delivered, :user_id, :is_paid)
+    params.require(:order).permit(:is_confirmed, :is_delivered, :user_id, :is_paid, :in_preparation)
   end
-  
 end

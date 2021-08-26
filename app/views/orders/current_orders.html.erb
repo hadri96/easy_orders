@@ -15,7 +15,7 @@
 <div class="black-back">
   <h2 id="myarchivesh2">Orders in preparation</h2>
   <div class="archives">
-    <% @orders.select { |order| !order.is_delivered }.each do |order| %>
+    <% @orders.select { |order| !order.is_delivered && order.in_preparation }.each do |order| %>
       <div class="archive">
         <%= order.created_at %> | <%= order.calculate_price %>.-
         <%= link_to order_path(order), remote: true do %>
