@@ -84,7 +84,7 @@ end
 [['French Toast', "french-toast.jpg"], ['Bruschette with tomato', "bruschette-with-tomato.jpg"], ['Pappardelle alla bolognese', "papardelle-alla-bolognese.jpg"], ['Peking Duck', "peking-duck.jpg"], ['Stinky Tofu', "stinky-tofu.jpg"]].each do |mini_array|
   item = Item.new({
     name: mini_array[0],
-    item_price: (20..25).to_a.sample,
+    item_price: (15..25).to_a.sample,
     category: 'food',
   })
   file = File.open("app/assets/images/#{mini_array[1]}")

@@ -1,5 +1,5 @@
 <div class="ctn-menu">
-  <h4>What we have to offer :</h4>
+  <h3 style="font-weight: bold;">What we have to offer:</h3>
     <% @categories.each do |category| %>
       <div class="items-list">
         <h3><%= category.capitalize %></h3>
@@ -8,10 +8,10 @@
             <div class="item-inner">
               <%= link_to item_path(item), remote: true do %>
                 <% if item.photo.attached? %>
-                  <%= cl_image_tag item.photo.key, height: 'auto', width: 150 %>
+                  <%= cl_image_tag item.photo.key, height: 'auto', width: 150, class: "item-image" %>
                 <% end %>
-                <p><%= item.name%></p>
-                <p><%= round_price(item.item_price)%> CHF</p>
+                <p id="wrapper-name"><%= item.name%></p>
+                <p id="wrapper-price"><%= round_price(item.item_price)%> CHF</p>
               <% end %>
             </div>
           <% end %>

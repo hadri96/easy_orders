@@ -13,8 +13,6 @@
 
 .container-modal h3 {
   color: #0B3954;
-  // padding-top: 50%;
-  // padding-bottom: 10%;
 }
 
 .container-modal h4 {
@@ -77,20 +75,19 @@
 }
 
 .name-item-modal {
-
 }
 
 .modal-fields-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25%;
+  margin-top: 20%;
 }
 
 .modal-edit-item {
   display: flex;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 10%;
   margin-bottom: 20px;
   max-width: 150px;
 }

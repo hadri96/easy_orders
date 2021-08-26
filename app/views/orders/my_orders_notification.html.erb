@@ -1,4 +1,4 @@
-<h2 id="myorderh2">My Order</h2>
+<h3 id="myorderh2">My Order</h3>
 
 <div class="contain">  
   <% if current_user.avatar.attached? %>
@@ -6,18 +6,17 @@
   <% else %>
     <%= image_tag "default-avatar.jpg", class: "avatar-bordered avat"  %>
   <% end %>
-  <%#= image_tag "https://kitt.lewagon.com/placeholder/users/sarahlafer", class: "avatar-bordered avat", alt: "avatar-bordered" %>
   <div class="text-notif">
-    <h2><%= ["Chloé", "Henry", "Joe", "Mike"].sample %></h2>
-    <h2>prepares your order</h2>
+    <h4><%= ["Chloé", "Henry", "Joe", "Mike"].sample %></h4>
+    <h4>prepares your order</h4>
     <hr>
-    <h2>Please come to</h2>
-    <h2>pick it up!</h2>
+    <h4>Please come to</h4>
+    <h4>pick it up!</h4>
     <hr>
-    <h2>Password:</h2>
-    <h2><%= ["Rotterdam", "Grange", "Cactus", "Forêt"].sample %></h2>
+    <h4>Password:</h4>
+    <h4><%= ["Rotterdam", "Grange", "Cactus", "Forêt"].sample %></h4>
     <hr>
-    <h2><%= @order.id  %></h2>
+    <h4>Your order number is: <%= @order.id  %></h4>
   </div>
 </div>
 

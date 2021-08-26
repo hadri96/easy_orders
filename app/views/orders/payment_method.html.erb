@@ -23,9 +23,13 @@
         <div class=" pay-select-box" id="mastervisa"></div>
         <%= image_tag("mastervisa-logo.png", class: 'img-payment') %>
       </div>
+      <div class="info-pay" id="cash-info">
+        <div class=" pay-select-box" id="cash"></div>
+        <h2 class="pay-cash"><i class="fas fa-money-bill-wave"></i> Pay cash</h2>
+      </div>
     </div>
     <div class="btn-show-end-page-pay">
-      <%= link_to "Confirmation", thanks_message_path, class: "btn-dark-blue-show-pay" %>
+      <%= link_to "Confirmation", payment_confirmation_path, class: "btn-dark-blue-show-pay" %>
     </div>
   </div>
 </div>

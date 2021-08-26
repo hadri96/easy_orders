@@ -8,8 +8,8 @@
       <span aria-hidden="true">&times;</span>
     </button>
   <div class="modal-fields-item">
+    <h3><%= @item.name %></h5>
     <h3><%= round_price(@item.item_price) %> CHF</h3>
-    <h5><%= @item.name %></h5>
     <%= form_for @order_list do |f| %>
       <div class="modal-edit-item">
         <p class="modal-button-item" id="minus-button">-</p>
