@@ -26,14 +26,12 @@
 .images {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .banner-lewagon {
-  text-align-last: center;
   width: 100%;
   height: 44vh;
-  // background-color: #46B4BF;
-  border-radius: 0px 0px 15px 15px;
 }
 
 .banner-lewagon h3 {
@@ -53,11 +51,12 @@
 .image3 {
   display: flex;
   justify-content: center;
-  background-image: url('menubuttonback.png');
-  background-size: cover;
+  background-image: url(menubuttonback.png);
+  background-size: contain;
   margin: 0 auto;
-  width: 50.5%;
-  height: 29vh;
+  width: 50%;
+  height: 30%;
   margin-top: 25%;
   filter: drop-shadow(3px 3px 4px #0B3954);
+  background-repeat: no-repeat;
 } 
