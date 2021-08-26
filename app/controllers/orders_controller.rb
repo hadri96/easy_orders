@@ -1,10 +1,15 @@
 class OrdersController < ApplicationController
 
-  before_action :find_ID, except: [:account, :my_archives]
+  before_action :find_ID, except: [:account, :my_archives, :current_orders]
+  before_action :barman_redirect, except: [:current_orders, :show]
 
   def show
     @order = Order.find(params[:id])
     # @orders = @user.orders.select { |order| order.is_confirmed == false }
+  end
+
+  def current_orders
+    @orders = Order.all.where(is_delivered: false)
   end
 
   def payment_method
@@ -58,5 +63,9 @@ class OrdersController < ApplicationController
   def find_ID
     @order = Order.find(params[:id])
   end
-  
+
+  def barman_redirect
+    redirect_to current_orders_path if current_user.is_barman
+  end
+
 end

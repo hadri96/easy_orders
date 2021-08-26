@@ -35,6 +35,17 @@ alex = User.new({
 
 alex.save
 
+alex_barman = User.new({
+  username: 'alextex',
+  first_name: 'Alexandre',
+  last_name: 'Stutz',
+  email: 'alex@gmail.com',
+  password: 'Picasso96*',
+  is_barman: true
+})
+
+alex_barman.save
+
 hadrien = User.new({
   username: 'hadri96',
   first_name: 'Hadrien',
