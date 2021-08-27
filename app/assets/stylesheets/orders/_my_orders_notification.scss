@@ -6,6 +6,9 @@
   border: transparent;
   position: absolute;
   margin: 0px;
+  object-fit: cover;
+  object-position: 0px -13px;
+  top: 10px;
 }
 
 .text-notif {
@@ -48,5 +51,4 @@ hr {
 .avatar-bordered-avat {
   width: 70px;
   radius: 50px;
-
 }

@@ -3,15 +3,15 @@
 <div class="contain">
     <%= image_tag("colin.jpg", aspect_ratio: "1:1", quality: 100, width: 70, crop: "fill", radius: 50, class: "avatar-bordered avat-notif") %>
   <div class="text-notif">
-    <h4>Alex</h4>
-    <p>is preparing your order</p>
+    <h4><strong>Colin</strong></h4>
+    <p>is your barman</p>
     <hr>
-    <p>Please come to</p>
-    <p>pick it up!</p>
+    <h4>Please come to</h4>
+    <h4>pick it up!</h4>
     <hr>
-    <h4>Your password for the order is:</h4>
-    <p><%= @order.password %></p>
+    <p>Your order password is:</p>
+    <h4><%= @order.password %></h4>
     <hr>
-    <h4>Your order number is:</h4><p><%= 8200 + @order.id %></p>
+    <p>Your order number is:</p><p><%= 8200 + @order.id %></p>
   </div>
 </div>
