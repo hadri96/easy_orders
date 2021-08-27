@@ -25,6 +25,17 @@ colin = User.new({
 
 colin.save
 
+colin_barman = User.new({
+  username: 'colin',
+  first_name: 'Colin',
+  last_name: 'Schmidt',
+  email: 'colin@gmail.com',
+  password: 'Picasso96*',
+  is_barman: true
+})
+
+colin_barman.save
+
 alex = User.new({
   username: 'alexflex',
   first_name: 'Alex',
@@ -34,17 +45,6 @@ alex = User.new({
 })
 
 alex.save
-
-alex_barman = User.new({
-  username: 'alextex',
-  first_name: 'Alexandre',
-  last_name: 'Stutz',
-  email: 'alex@gmail.com',
-  password: 'Picasso96*',
-  is_barman: true
-})
-
-alex_barman.save
 
 hadrien = User.new({
   username: 'hadri96',

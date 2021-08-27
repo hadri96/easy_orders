@@ -1,26 +1,29 @@
-<div class="pending-top">
-  <h3 class="pending-title">Pending orders</h3>
-  <div class="archives">
-    <% @orders.select { |order| !order.in_preparation }.each do |order| %>
-      <div class="pending-order-top">
-        <%= link_to order_path(order), class: 'linkto', remote: true do %>
-          <%= order.created_at.strftime('%H:%M') %> | <%= "#{order.user.first_name} #{order.user.last_name}"%> | <%= round_price(order.calculate_price) %>.-
-          <i class="fas fa-edit" style="font-size: 20px; color: #FF6663; padding-left: 10px;"></i>
-        <% end %>
-      </div>
-    <% end %>
+<div class="pagebarman">
+  <div class="pending-top">
+    <h3 class="pending-title">Pending orders</h3>
+    <div class="archives">
+      <% @orders.select { |order| !order.in_preparation }.each do |order| %>
+        <div class="pending-order-top">
+          <%= link_to order_path(order), class: 'linkto', remote: true do %>
+            <%= order.created_at.strftime('%H:%M') %> | <%= "#{order.user.first_name} #{order.user.last_name}"%> | <%= round_price(order.calculate_price) %>.-
+            <i class="fas fa-edit" style="font-size: 20px; color: #FF6663; padding-left: 10px;"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="pending-bottom">
-  <h3 class="pending-title">Work in progress</h3>
-  <div class="archives">
-    <% @orders.select { |order| !order.is_delivered && order.in_preparation }.each do |order| %>
-      <div class="pending-order-bottom">
-        <%= link_to order_path(order), class: 'linkto', remote: true do %>
-          <%= order.created_at.strftime('%H:%M') %> | <%= "#{order.user.first_name} #{order.user.last_name}"%> | <%= round_price(order.calculate_price) %>.-
-          <i class="fas fa-edit" style="font-size: 20px; color: #FF6663; padding-left: 10px;"></i>
-        <% end %>
-      </div>
-    <% end %>
+
+  <div class="pending-bottom">
+    <h3 class="pending-title">Work in progress</h3>
+    <div class="archives">
+      <% @orders.select { |order| !order.is_delivered && order.in_preparation }.each do |order| %>
+        <div class="pending-order-bottom">
+          <%= link_to order_path(order), class: 'linkto', remote: true do %>
+            <%= order.created_at.strftime('%H:%M') %> | <%= "#{order.user.first_name} #{order.user.last_name}"%> | <%= round_price(order.calculate_price) %>.-
+            <i class="fas fa-edit" style="font-size: 20px; color: #FF6663; padding-left: 10px;"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
