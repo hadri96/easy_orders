@@ -1,9 +1,9 @@
+<h4 id="titlebarman">Content of the order</h4>
 <div class="ctn-show-infos-barman">
-  <h4 id="titlebarman">Content of the order</h4>
-
-  <p><strong>Customer:</strong> <%= "#{@order.user.first_name} #{@order.user.last_name}" %></p>
-  <p><strong>Ordered at:</strong> <%= @order.created_at.strftime('%H:%M') %></p>
-  <p><strong>Password:</strong> <%= @order.password %></p>
+  <h4 id="pcouleur4">Customer infos</h4>
+  <p id="pcouleur"><strong>Customer:</strong> <%= "#{@order.user.first_name} #{@order.user.last_name}" %></p>
+  <p id="pcouleur"><strong>Ordered at:</strong> <%= @order.created_at.strftime('%H:%M') %></p>
+  <p id="pcouleur"><strong>Password:</strong> <%= @order.password %></p>
   <div class="ctn-show-infos-cart">
     <% @order.order_lists.each do |order_list| %>
       <div class="ctn-show-items-cart">
@@ -13,12 +13,12 @@
         <p><%= round_price(order_list.item.item_price * order_list.item_quantity) %>.-</p>
       </div>
     <% end %>
-    <div class="total-barman ">
+    <div class="total-barman">
       <h4>Total</h4>
-      <p><%= round_price(@order.calculate_price) %> CHF</p>
+      <h4><%= round_price(@order.calculate_price) %> CHF</h4>
     </div>
     <%= form_for @order do |f| %>
-      <div class="modal-edit-item">
+      <div class="modal-edit-item-barman">
       <div>
         <%= f.hidden_field :in_preparation, value: true %>
       </div>
