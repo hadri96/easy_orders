@@ -2,7 +2,7 @@
   <h4 id="titlebarman">Content of the order</h4>
   <p><strong>Customer:</strong> <%= "#{@order.user.first_name} #{@order.user.last_name}" %></p>
   <p><strong>Ordered at:</strong> <%= @order.created_at.strftime('%H:%M') %></p>
-  <p><strong>Password:</strong> <%= @order.password %></p>
+  <p><strong>Password:</strong> <%= @order.passcode %></p>
   <div class="ctn-show-infos-cart">
     <% @order.order_lists.each do |order_list| %>
       <div class="ctn-show-items-cart">

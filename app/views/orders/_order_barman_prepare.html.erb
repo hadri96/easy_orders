@@ -3,7 +3,7 @@
   <h4 id="pcouleur4">Customer infos</h4>
   <p id="pcouleur"><strong>Customer:</strong> <%= "#{@order.user.first_name} #{@order.user.last_name}" %></p>
   <p id="pcouleur"><strong>Ordered at:</strong> <%= @order.created_at.strftime('%H:%M') %></p>
-  <p id="pcouleur"><strong>Password:</strong> <%= @order.password %></p>
+  <p id="pcouleur"><strong>Password:</strong> <%= @order.passcode %></p>
   <div class="ctn-show-infos-cart">
     <% @order.order_lists.each do |order_list| %>
       <div class="ctn-show-items-cart">

@@ -6,7 +6,7 @@ class OrderListsController < ApplicationController
           order.is_confirmed = false
           order.is_delivered = false
           order.user_id = current_user.id
-          order.password = ["Rotterdam", "Grange", "Cactus", "Forêt"].sample
+          order.passcode = ["Rotterdam", "Grange", "Cactus", "Forêt"].sample
       end
       @order_list = OrderList.find_by(order_id: @order.id, item_id: params['order_list']['item_id'].to_i)
       if @order_list.nil?
