@@ -6,6 +6,8 @@
   border: transparent;
   position: absolute;
   margin: 0px;
+  object-fit: cover;
+  object-position: 0px -15px;
 }
 
 .text-notif {
@@ -14,11 +16,11 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 105px auto 18px auto;
+  margin: 105px auto 40px auto;
   border-radius: 15px;
   justify-content: flex-end;
   color: white;
-  padding: 0px 50px 0px 50px;
+  padding: 0px 60px 0px 60px;
 }
 
 .text h2 {
