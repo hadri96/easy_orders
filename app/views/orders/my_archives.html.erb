@@ -3,7 +3,7 @@
   <div class="archives">
     <% @orders.select{ |order| order.is_confirmed }.each do |order| %>
       <div class="archive">
-        <%= order.created_at %> | <%= round_price(order.calculate_price) %> CHF
+        <%= order.created_at.strftime('%H:%M') %> | <%= round_price(order.calculate_price) %> CHF
         <%= link_to order_path(order), remote: true do %>
         <i class="fas fa-hand-point-up"></i>
         <% end %>

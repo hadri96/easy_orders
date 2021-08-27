@@ -14,17 +14,34 @@ schema
 
 
 const checkPassword = () => {
-  const passwordBox = document.getElementsByClassName('form-control password required')[0];
+  const passwordBox = document.getElementById('password-field');
   if (passwordBox) {
     passwordBox.addEventListener('keyup', (_event) => {
-      const password = document.getElementById('user_password').value;
+      const password = document.getElementById('password-field').value;
       const checks = schema.validate(password, { list: true });
+      insertFields();
       checkLowercase(checks);
       checkUppercase(checks);
       checkDigits(checks);
       checkSymbols(checks);
       checkLength(checks);
   })};
+};
+
+const insertFields = () => {
+  const edit_page = !!(document.getElementsByClassName("avatar-img-edit")[0]);
+  if (edit_page) {
+    const last_name_field = document.getElementsByClassName('form-group user_last_name')[0];
+    const check = !!(document.getElementsByClassName('lower-password')[0]);
+    if (!(check)) {
+      last_name_field.insertAdjacentHTML('afterend',
+        `<p class="form-hint lower-password">❌ Contains lowercase</p>
+        <p class="form-hint upper-password">❌ Contains uppercase</p>
+        <p class="form-hint digits-password">❌ Contains digits</p>
+        <p class="form-hint symbols-password">❌ Contains symbols</p>
+        <p class="form-hint length-password">❌ Has minimum 8 characters</p>`);
+    };
+  };
 };
 
 const checkLowercase = (list) => {

@@ -37,17 +37,12 @@
                   label: false,
                   placeholder: 'Last name',
                   input_html: { class: "input" }%>
-      <p class="form-hint lower-password"> Contains lowercase</p>
-      <p class="form-hint upper-password"> Contains uppercase</p>
-      <p class="form-hint digits-password"> Contains digits</p>
-      <p class="form-hint symbols-password"> Contains symbols</p>
-      <p class="form-hint length-password"> Has minimum 8 characters</p>
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
                   label: false,
                   placeholder: 'New password',
-                  input_html: { class: "input" } %>
+                  input_html: { class: "input", id: "password-field" } %>
       <%= f.input :password_confirmation,
                   required: false,
                   label: false,
